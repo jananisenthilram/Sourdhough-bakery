@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- ICONS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<section class="login-section">
+
+  <div class="login-container">
+
+    <!-- LEFT IMAGE -->
+    <div class="login-image">
+      <img src="images/login.jpg" alt="">
+    </div>
+
+    <!-- RIGHT FORM -->
+    <div class="login-form">
+
+      <!-- LOGO -->
+      <div class="login-logo">
+        <a href="index.html">
+            <img src="images/logo.png" alt="logos">
+        </a>
+      </div>
+
+      <h2>Welcome Back</h2>
+      <p>Login to your account</p>
+
+      <form>
+
+        <!-- EMAIL -->
+        <input type="email" placeholder="Email Address" required>
+
+        <!-- PASSWORD -->
+        <div class="password-box">
+          <input type="password" id="password" placeholder="Password" required>
+          <i class="fas fa-eye" id="togglePassword"></i>
+        </div>
+
+        <button type="submit">Login</button>
+
+      </form>
+
+      <!-- SOCIAL LOGIN -->
+      <div class="social-login">
+        <p>Or login with</p>
+
+        <div class="social-icons">
+          <i class="fab fa-android"></i>
+          <i class="fab fa-apple"></i>
+          <i class="fab fa-google"></i>
+        </div>
+      </div>
+
+      <!-- REGISTER -->
+      <div class="login-register">
+        <p>
+          Don’t have an account?
+          <a href="register.html">Register</a>
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- JS -->
+<script src="login.js"></script>
+
+</body>
+</html>

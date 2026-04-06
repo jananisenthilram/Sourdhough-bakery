@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sourdough Bakery & Bread Making Classes</title>
+
+  <!-- GOOGLE FONT (ONE FONT ONLY) -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- icon -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- CSS FILE -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  <div class="left">
+    Chennai | +91 98765 43210 | Mon-Sat: 8AM - 8PM
+  </div>
+
+  <div class="right">
+    My Account | Cart
+  </div>
+</div>
+
+<nav class="navbar">
+
+  <!-- LOGO -->
+  <div class="logo">
+    <img src="images/logo.png" alt="Logo">
+  </div>
+
+  <!-- HAMBURGER -->
+  <div class="menu-toggle" id="menu-toggle">☰</div>
+
+  <!-- MENU -->
+  <ul class="nav-links">
+    <li><a href="index.html">Home1</a></li>
+    <li><a href="home2.html">Home2</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="shop.html">Shop</a></li>
+    <li><a href="classes.html">Classes</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+
+    <!-- MOBILE BUTTONS ONLY -->
+  <div class="nav-right">
+      <button id="rtlToggleBtn" class="nav-rtl-btn">RTL</button>
+      <button id="darkToggleBtn" class="dark-btn">🌙</button>
+      <li class="mobile-btn"><a href="#" class="login">Login</a></li>
+      <li class="mobile-btn"><a href="order.html" class="order">Order Now</a></li>
+    </div>
+ 
+
+
+  <!-- DESKTOP BUTTONS -->
+  <div class="nav-btns">
+    <a href="login.html" class="login">Login</a>
+    <a href="order.html" class="order">Order Now</a>
+  </div>
+
+</nav>
+<section class="contact-hero-bg">
+
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+
+    <span class="hero-top">GET IN TOUCH</span>
+
+    <h1>Contact Our Bakery</h1>
+
+    <p>
+      Have questions about our bakery or bread making classes?  
+      We’re here to help you with everything you need.
+    </p>
+
+  </div>
+
+</section>
+<section class="contact-info-section">
+
+  <div class="contact-info-container">
+
+    <!-- BOX 1 -->
+    <div class="contact-box">
+      <i class="fas fa-bread-slice"></i>
+      <h3>Reach Out Easily</h3>
+      <p>
+        Find all the necessary contact details to get in touch with us effortlessly.
+      </p>
+      <a href="#">contact@email.com</a>
+      <span>+1 583 454 846</span>
+    </div>
+
+    <!-- BOX 2 -->
+    <div class="contact-box">
+      <i class="fas fa-coffee"></i>
+      <h3>General Info</h3>
+      <p>
+        Find answers to common queries and additional information about our services.
+      </p>
+      <a href="#">quote@email.com</a>
+      <span>+1 693 584 468</span>
+    </div>
+
+    <!-- BOX 3 -->
+    <div class="contact-box">
+      <i class="fas fa-store"></i>
+      <h3>Who We Are</h3>
+      <p>
+        Learn more about our company, our mission, and our values.
+      </p>
+      <a href="#">info@email.com</a>
+      <span>+1 648 457 468</span>
+    </div>
+
+  </div>
+
+</section>
+<section class="step-form-section">
+
+  <div class="form-container">
+
+    <span class="form-sub">WHAT WE DO</span>
+    <h2 class="form-title">Simple tools for big goals</h2>
+
+    <!-- STEPS -->
+    <div class="steps">
+      <div class="step active"><span>1</span><p>Personal</p></div>
+      <div class="line"></div>
+      <div class="step"><span>2</span><p>Service</p></div>
+      <div class="line"></div>
+      <div class="step"><span>3</span><p>Contact</p></div>
+    </div>
+
+    <!-- FORM -->
+    <form id="multiForm">
+
+      <!-- STEP 1 -->
+      <div class="form-step active">
+        <div class="form-row">
+          <input type="text" placeholder="Name *">
+          <input type="text" placeholder="Surname *">
+        </div>
+
+        <div class="form-row">
+          <select>
+            <option>Your Country *</option>
+            <option>India</option>
+            <option>USA</option>
+          </select>
+          <input type="text" placeholder="City *">
+        </div>
+
+        <div class="form-row">
+          <input type="text" placeholder="Address *">
+          <input type="text" placeholder="Zip Code *">
+        </div>
+
+        <textarea placeholder="Message"></textarea>
+
+        <button type="button" class="btn-next">NEXT</button>
+      </div>
+
+      <!-- STEP 2 -->
+      <div class="form-step">
+        <div class="form-row">
+          <select>
+            <option>Service *</option>
+            <option>Baking Class</option>
+            <option>Workshop</option>
+          </select>
+
+          <select>
+            <option>Extra Service *</option>
+            <option>Delivery</option>
+            <option>Consultation</option>
+          </select>
+        </div>
+
+        <textarea placeholder="Additional Informations"></textarea>
+
+        <div class="btn-group">
+          <button type="button" class="btn-prev">PREVIOUS</button>
+          <button type="button" class="btn-next">NEXT</button>
+        </div>
+      </div>
+
+      <!-- STEP 3 -->
+      <div class="form-step">
+        <div class="form-row">
+          <input type="text" placeholder="Best Contact *">
+          <input type="text" placeholder="Phone *">
+        </div>
+
+        <input type="email" placeholder="Email *">
+
+        <div class="btn-group">
+          <button type="button" class="btn-prev">PREVIOUS</button>
+          <button type="submit" class="btn-send">SEND</button>
+        </div>
+      </div>
+
+    </form>
+
+  </div>
+
+</section>
+<section class="contact-info">
+
+  <div class="info-container">
+
+    <!-- LEFT COUNTER -->
+    <div class="info-left">
+
+      <div class="info-box blue">
+        <h2 class="counter" data-count="96">0</h2>
+        <p>Consulting</p>
+      </div>
+
+      <div class="info-box light">
+        <h2 class="counter" data-count="87">0</h2>
+        <p>Customer Care</p>
+      </div>
+
+    </div>
+
+    <!-- RIGHT CONTENT -->
+    <div class="info-right">
+
+      <span class="sub">EXPLORE OUR WORLD</span>
+
+      <h2>Get inspired and stay ahead</h2>
+
+      <ul>
+        <li>Trusted Expert Support</li>
+        <li>Exceptional Customer Care</li>
+      </ul>
+
+      <button>VIEW DETAILS</button>
+
+    </div>
+
+  </div>
+
+  <!-- MAP -->
+  <div class="map">
+    <iframe 
+      src="https://maps.google.com/maps?q=Chennai&t=&z=13&ie=UTF8&iwloc=&output=embed"
+      frameborder="0">
+    </iframe>
+  </div>
+
+</section>
+<footer class="footer">
+
+  <div class="footer-container">
+
+    <!-- LOGO -->
+    <div class="footer-box">
+      <img src="images/logo.png" alt="Sourdough Bakery Logo" class="footer-logo">
+    </div>
+
+    <!-- WORKING HOURS -->
+    <div class="footer-box">
+      <h3>WORKING HOURS</h3>
+      <p>Monday - Friday: 08:00 am – 08:30 pm</p>
+      <p>Saturday: 10:00 am – 06:30 pm</p>
+      <p>Sunday: 10:00 am – 04:30 pm</p>
+    </div>
+
+    <!-- CLASSES / OFFER -->
+    <div class="footer-box">
+      <h3>BAKING CLASSES</h3>
+      <p>Join our sourdough workshops</p>
+      <p>Hands-on learning experience</p>
+      <p>Morning & Evening batches available</p>
+    </div>
+
+    <!-- SUBSCRIBE -->
+    <div class="footer-box">
+      <h3>SUBSCRIBE</h3>
+      <p>Get latest updates and offers.</p>
+
+      <div class="subscribe">
+        <input type="email" placeholder="Your email address *">
+        <button>&#10148;</button>
+      </div>
+    </div>
+
+  </div>
+
+  <hr>
+
+  <!-- BOTTOM -->
+  <div class="footer-bottom">
+    <p>© 2026 Sourdough Bakery & Bread Making Classes</p>
+
+    <div class="socials">
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+    </div>
+  </div>
+
+</footer>
+
+<!-- JS FILE -->
+<script src="js/script.js"></script>
+<script>
+const btn = document.getElementById("rtlToggleBtn");
+
+btn.addEventListener("click", () => {
+  document.body.classList.toggle("rtl");
+
+  if (document.body.classList.contains("rtl")) {
+    btn.innerText = "LTR";
+  } else {
+    btn.innerText = "RTL";
+  }
+});
+</script>
+<script>
+const darkBtn = document.getElementById("darkToggleBtn");
+
+// Load saved mode, default to dark
+if (localStorage.getItem("theme") === "light") {
+  // Stay light
+} else {
+  document.body.classList.add("dark");
+  darkBtn.innerText = "☀️";
+  localStorage.setItem("theme", "dark");
+}
+
+darkBtn.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+
+  if (document.body.classList.contains("dark")) {
+    localStorage.setItem("theme", "dark");
+    darkBtn.innerText = "☀️";
+  } else {
+    localStorage.setItem("theme", "light");
+    darkBtn.innerText = "🌙";
+  }
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const steps = document.querySelectorAll(".form-step");
+  const indicators = document.querySelectorAll(".step");
+
+  let current = 0;
+
+  function showStep(i) {
+    steps.forEach((step, index) => {
+      step.classList.toggle("active", index === i);
+    });
+
+    indicators.forEach((step, index) => {
+      step.classList.toggle("active", index === i);
+    });
+  }
+
+  document.querySelectorAll(".btn-next").forEach(btn => {
+    btn.onclick = () => {
+      if (current < steps.length - 1) {
+        current++;
+        showStep(current);
+      }
+    };
+  });
+
+  document.querySelectorAll(".btn-prev").forEach(btn => {
+    btn.onclick = () => {
+      if (current > 0) {
+        current--;
+        showStep(current);
+      }
+    };
+  });
+
+  showStep(current);
+
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const counters = document.querySelectorAll(".counter");
+
+  counters.forEach(counter => {
+
+    const updateCount = () => {
+      const target = +counter.getAttribute("data-count");
+      const count = +counter.innerText;
+
+      const increment = target / 60;
+
+      if (count < target) {
+        counter.innerText = Math.ceil(count + increment);
+        setTimeout(updateCount, 20);
+      } else {
+        counter.innerText = target;
+      }
+    };
+
+    updateCount();
+  });
+
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const links = document.querySelectorAll(".nav-links a");
+  const currentPath = window.location.pathname.split('/').pop();
+  links.forEach(link => {
+    if (link.getAttribute("href") === currentPath) {
+      link.classList.add("active");
+    }
+  });
+});
+</script>
+
+</body>
+</html>

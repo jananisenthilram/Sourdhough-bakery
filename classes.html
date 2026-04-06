@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sourdough Bakery & Bread Making Classes</title>
+
+  <!-- GOOGLE FONT (ONE FONT ONLY) -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- icon -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+   
+
+  <!-- CSS FILE -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  <div class="left">
+    Chennai | +91 98765 43210 | Mon-Sat: 8AM - 8PM
+  </div>
+
+  <div class="right">
+    My Account | Cart
+  </div>
+</div>
+
+<nav class="navbar">
+
+  <!-- LOGO -->
+  <div class="logo">
+    <img src="images/logo.png" alt="Logo">
+  </div>
+
+  <!-- HAMBURGER -->
+  <div class="menu-toggle" id="menu-toggle">☰</div>
+
+  <!-- MENU -->
+  <ul class="nav-links">
+    <li><a href="index.html">Home1</a></li>
+    <li><a href="home2.html">Home2</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="shop.html">Shop</a></li>
+    <li><a href="classes.html">Classes</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+
+    <!-- MOBILE BUTTONS ONLY -->
+  <div class="nav-right">
+      <button id="rtlToggleBtn" class="nav-rtl-btn">RTL</button>
+      <button id="darkToggleBtn" class="dark-btn">🌙</button>
+      <li class="mobile-btn"><a href="#" class="login">Login</a></li>
+      <li class="mobile-btn"><a href="order.html" class="order">Order Now</a></li>
+  </div>
+
+  <!-- DESKTOP BUTTONS -->
+  <div class="nav-btns">
+    <a href="login.html" class="login">Login</a>
+    <a href="order.html" class="order">Order Now</a>
+  </div>
+
+</nav>
+<!--hero-->
+<section class="class-hero">
+  <div class="class-hero-content">
+
+    <h1>Baking Classes</h1>
+
+    <div class="class-breadcrumb">
+      <a href="#">Home</a>
+      <span>›</span>
+      <span>Classes</span>
+    </div>
+
+    <p>
+      Learn baking from expert chefs with hands-on training.
+      Master bread, cakes, and pastries step by step.
+    </p>
+
+  </div>
+</section>
+<!--hero end-->
+<!--class-->
+<section class="class-section">
+  <div class="class-container">
+
+    <!-- FILTER -->
+    <div class="class-filter">
+      <button class="active" data-filter="all">All</button>
+      <button data-filter="bread">Bread Making</button>
+      <button data-filter="cake">Cake Baking</button>
+      <button data-filter="pastry">Pastry</button>
+    </div>
+
+    <!-- GRID -->
+    <div class="class-grid">
+
+      <!-- 1 -->
+      <div class="class-card" data-category="bread">
+        <img src="images/class1.jpg">
+        <h3>Bread Making Basics</h3>
+        <p class="class-meta">Beginner • 3 Hours</p>
+        <p class="class-price">₹999</p>
+        <button class="join-btn" onclick="openForm('Bread Basics')">Join Class</button>
+      </div>
+
+      <!-- 2 -->
+      <div class="class-card" data-category="cake">
+        <img src="images/class2.jpg">
+        <h3>Cake Baking Mastery</h3>
+        <p class="class-meta">Intermediate • 4 Hours</p>
+        <p class="class-price">₹1499</p>
+        <button class="join-btn" onclick="openForm('Cake Baking Mastery')">Join Class</button>
+      </div>
+
+      <!-- 3 -->
+      <div class="class-card" data-category="pastry">
+        <img src="images/class3.jpg">
+        <h3>Pastry Techniques</h3>
+        <p class="class-meta">Beginner • 3 Hours</p>
+        <p class="class-price">₹1199</p>
+        <button class="join-btn" onclick="openForm('Pastry Techniques')">Join Class</button>
+      </div>
+
+      <!-- 4 -->
+      <div class="class-card" data-category="bread">
+        <img src="images/class4.jpg">
+        <h3>Sourdough Workshop</h3>
+        <p class="class-meta">Advanced • 5 Hours</p>
+        <p class="class-price">₹1999</p>
+        <button class="join-btn" onclick="openForm('Sourdough Workshop')">Join Class</button>
+      </div>
+
+      <!-- 5 -->
+      <div class="class-card" data-category="cake">
+        <img src="images/class5.jpg">
+        <h3>Chocolate Cake Class</h3>
+        <p class="class-meta">Beginner • 3 Hours</p>
+        <p class="class-price">₹1299</p>
+        <button class="join-btn" onclick="openForm('Chocolate Cake Class')">Join Class</button>
+      </div>
+
+      <!-- 6 -->
+      <div class="class-card" data-category="pastry">
+        <img src="images/class6.jpg">
+        <h3>French Pastry Course</h3>
+        <p class="class-meta">Advanced • 4 Hours</p>
+        <p class="class-price">₹1799</p>
+        <button class="join-btn" onclick="openForm('French Pastry Course')">
+          Join Class
+        </button>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<!--class end-->
+<!--feature-->
+<section class="course-highlight">
+  <div class="course-highlight-container">
+
+    <!-- IMAGE -->
+    <div class="course-highlight-img">
+      <img src="images/feature-class.jpg" alt="">
+    </div>
+
+    <!-- CONTENT -->
+    <div class="course-highlight-content">
+
+      <span class="course-highlight-tag">FEATURED CLASS</span>
+
+      <h2>Master Bread Making Course</h2>
+
+      <p>
+        Learn the art of baking soft breads and sourdough with hands-on
+        training from expert chefs. Perfect for beginners and aspiring bakers.
+      </p>
+
+      <!-- FEATURES -->
+      <ul class="course-highlight-list">
+        <li>Hands-on practical training</li>
+        <li>Learn fermentation techniques</li>
+        <li>Includes all ingredients</li>
+        <li>Certificate after completion</li>
+      </ul>
+
+      <div class="course-highlight-price">₹1999</div>
+
+      <button class="course-highlight-btn">Join class</button>
+
+    </div>
+
+  </div>
+</section>
+<!--feature end-->
+<!--features-->
+<section class="class-features-section">
+  <div class="class-features-container">
+
+    <!-- HEADING -->
+    <div class="class-features-header">
+      <span>CLASS BENEFITS</span>
+      <h2>What You Will Learn</h2>
+      <p>Our bread making classes are designed to give you hands-on experience and confidence in baking.</p>
+    </div>
+
+    <!-- GRID -->
+    <div class="class-features-grid">
+
+      <div class="class-feature-box">
+        <i class="fa-solid fa-bread-slice"></i>
+        <h3>Dough Preparation</h3>
+        <p>Learn mixing, kneading, and dough handling techniques.</p>
+      </div>
+
+      <div class="class-feature-box">
+        <i class="fa-solid fa-fire"></i>
+        <h3>Baking Techniques</h3>
+        <p>Master oven control and baking methods for perfect results.</p>
+      </div>
+
+      <div class="class-feature-box">
+        <i class="fa-solid fa-seedling"></i>
+        <h3>Fermentation</h3>
+        <p>Understand sourdough starters and natural fermentation.</p>
+      </div>
+
+      <div class="class-feature-box">
+        <i class="fa-solid fa-cookie"></i>
+        <h3>Pastry Basics</h3>
+        <p>Learn croissants, buns, and pastry techniques.</p>
+      </div>
+
+      <div class="class-feature-box">
+        <i class="fa-solid fa-award"></i>
+        <h3>Professional Skills</h3>
+        <p>Build confidence with real baking practices.</p>
+      </div>
+
+      <div class="class-feature-box">
+        <i class="fa-solid fa-users"></i>
+        <h3>Hands-on Training</h3>
+        <p>Practice every step with expert guidance.</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<!--features end-->
+<!--timetable-->
+<section class="schedule-section">
+  <div class="schedule-container">
+
+    <!-- HEADER -->
+    <div class="schedule-header">
+      <span>UPDATED SCHEDULE</span>
+      <h2>Timetable of Classes</h2>
+    </div>
+
+    <!-- TABS -->
+    <div class="schedule-tabs">
+      <button class="active" data-day="sunday">Sunday</button>
+      <button data-day="monday">Monday</button>
+      <button data-day="tuesday">Tuesday</button>
+      <button data-day="wednesday">Wednesday</button>
+      <button data-day="thursday">Thursday</button>
+      <button data-day="friday">Friday</button>
+      <button data-day="saturday">Saturday</button>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="schedule-content">
+
+      <!-- SUNDAY (5) -->
+      <div class="day active" id="sunday">
+        <div class="class-row">
+          <img src="images/class1.jpg">
+          <div>
+            <h3>Bread Making Basics</h3>
+            <p>09:00 AM - 11:00 AM • Chef Ananya</p>
+          </div>
+          <button>About Class</button>
+        </div>
+
+        <div class="class-row">
+          <img src="images/class2.jpg">
+          <div>
+            <h3>Cake Baking</h3>
+            <p>11:30 AM - 01:00 PM • Chef Ravi</p>
+          </div>
+          <button>About Class</button>
+        </div>
+
+        <div class="class-row">
+          <img src="images/class3.jpg">
+          <div>
+            <h3>Pastry Techniques</h3>
+            <p>02:00 PM - 04:00 PM • Chef Arjun</p>
+          </div>
+          <button>About Class</button>
+        </div>
+
+        <div class="class-row">
+          <img src="images/class4.jpg">
+          <div>
+            <h3>Sourdough Workshop</h3>
+            <p>04:30 PM - 06:30 PM • Chef Meena</p>
+          </div>
+          <button>About Class</button>
+        </div>
+
+        <div class="class-row">
+          <img src="images/class5.jpg">
+          <div>
+            <h3>Chocolate Desserts</h3>
+            <p>07:00 PM - 09:00 PM • Chef Kiran</p>
+          </div>
+          <button>About Class</button>
+        </div>
+      </div>
+
+      <!-- MONDAY (4) -->
+      <div class="day" id="monday">
+        <div class="class-row">
+          <img src="images/class1.jpg">
+          <div>
+            <h3>Bread Making</h3>
+            <p>09:00 AM - 11:00 AM</p>
+          </div>
+          <button>About Class</button>
+        </div>
+
+        <div class="class-row">
+          <img src="images/class2.jpg">
+          <div>
+            <h3>Cake Baking</h3>
+            <p>11:30 AM - 01:00 PM</p>
+          </div>
+          <button>About Class</button>
+        </div>
+
+        <div class="class-row">
+          <img src="images/class3.jpg">
+          <div>
+            <h3>Pastry Class</h3>
+            <p>02:00 PM - 04:00 PM</p>
+          </div>
+          <button>About Class</button>
+        </div>
+
+        <div class="class-row">
+          <img src="images/class4.jpg">
+          <div>
+            <h3>Sourdough</h3>
+            <p>05:00 PM - 07:00 PM</p>
+          </div>
+          <button>About Class</button>
+        </div>
+      </div>
+
+      <!-- TUESDAY (3) -->
+      <div class="day" id="tuesday">
+        <div class="class-row">
+          <img src="images/class1.jpg">
+          <div>
+            <h3>Bread Basics</h3>
+            <p>10:00 AM - 12:00 PM</p>
+          </div>
+          <button>About Class</button>
+        </div>
+
+        <div class="class-row">
+          <img src="images/class2.jpg">
+          <div>
+            <h3>Chocolate Cake</h3>
+            <p>01:00 PM - 03:00 PM</p>
+          </div>
+          <button>About Class</button>
+        </div>
+
+        <div class="class-row">
+          <img src="images/class3.jpg">
+          <div>
+            <h3>Pastry Skills</h3>
+            <p>04:00 PM - 06:00 PM</p>
+          </div>
+          <button>About Class</button>
+        </div>
+      </div>
+
+      <!-- WEDNESDAY (3) -->
+      <div class="day" id="wednesday">
+        <div class="class-row">
+          <img src="images/class2.jpg">
+          <div>
+            <h3>Cake Decoration</h3>
+            <p>09:30 AM - 11:30 AM</p>
+          </div>
+          <button>About Class</button>
+        </div>
+
+        <div class="class-row">
+          <img src="images/class4.jpg">
+          <div>
+            <h3>Sourdough Mastery</h3>
+            <p>12:30 PM - 02:30 PM</p>
+          </div>
+          <button>About Class</button>
+        </div>
+
+        <div class="class-row">
+          <img src="images/class3.jpg">
+          <div>
+            <h3>Pastry Workshop</h3>
+            <p>03:30 PM - 05:30 PM</p>
+          </div>
+          <button>About Class</button>
+        </div>
+      </div>
+
+      <!-- THURSDAY (3) -->
+      <div class="day" id="thursday">
+        <div class="class-row">
+          <img src="images/class1.jpg">
+          <div>
+            <h3>Bread Baking</h3>
+            <p>10:00 AM - 12:00 PM</p>
+          </div>
+          <button>About Class</button>
+        </div>
+
+        <div class="class-row">
+          <img src="images/class2.jpg">
+          <div>
+            <h3>Cake Basics</h3>
+            <p>01:00 PM - 03:00 PM</p>
+          </div>
+          <button>About Class</button>
+        </div>
+
+        <div class="class-row">
+          <img src="images/class5.jpg">
+          <div>
+            <h3>Dessert Class</h3>
+            <p>04:00 PM - 06:00 PM</p>
+          </div>
+          <button>About Class</button>
+        </div>
+      </div>
+
+      <!-- FRIDAY (3) -->
+      <div class="day" id="friday">
+        <div class="class-row">
+          <img src="images/class3.jpg">
+          <div>
+            <h3>Pastry Art</h3>
+            <p>09:00 AM - 11:00 AM</p>
+          </div>
+          <button>About Class</button>
+        </div>
+
+        <div class="class-row">
+          <img src="images/class4.jpg">
+          <div>
+            <h3>Sourdough Class</h3>
+            <p>12:00 PM - 02:00 PM</p>
+          </div>
+          <button>About Class</button>
+        </div>
+
+        <div class="class-row">
+          <img src="images/class2.jpg">
+          <div>
+            <h3>Cake Workshop</h3>
+            <p>03:00 PM - 05:00 PM</p>
+          </div>
+          <button>About Class</button>
+        </div>
+      </div>
+
+      <!-- SATURDAY (2) -->
+      <div class="day" id="saturday">
+        <div class="class-row">
+          <img src="images/class1.jpg">
+          <div>
+            <h3>Weekend Bread Class</h3>
+            <p>10:00 AM - 12:00 PM</p>
+          </div>
+          <button>About Class</button>
+        </div>
+
+        <div class="class-row">
+          <img src="images/class5.jpg">
+          <div>
+            <h3>Special Dessert Class</h3>
+            <p>01:00 PM - 03:00 PM</p>
+          </div>
+          <button>About Class</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!--timetable end-->
+
+<!--chef-->
+<section class="chef-grid-section">
+  <div class="chef-header">
+    <span>OUR TEAM OF PROFESSIONALS</span>
+    <h2>Meet Our Expert Bakers</h2>
+    <p>Learn from experienced chefs who bring passion and creativity to every bread-making class.</p>
+  </div>
+  <div class="chef-grid-container">
+
+    <div class="chef-card2">
+      <img src="images/chef1.jpg">
+      <div class="chef-overlay">
+        <h3>Alexander Lamb</h3>
+        <span>Master Chef</span>
+
+        <div class="chef-social">
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-google-plus-g"></i>
+        </div>
+
+        <button>View Profile</button>
+      </div>
+    </div>
+
+    <div class="chef-card2">
+      <img src="images/chef2.jpg">
+      <div class="chef-overlay">
+        <h3>Herbert Webster</h3>
+        <span>Master Chef</span>
+
+        <div class="chef-social">
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-google-plus-g"></i>
+        </div>
+
+        <button>View Profile</button>
+      </div>
+    </div>
+
+    <div class="chef-card2">
+      <img src="images/chef3.jpg">
+      <div class="chef-overlay">
+        <h3>Hana Montgomery</h3>
+        <span>Master Chef</span>
+
+        <div class="chef-social">
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-google-plus-g"></i>
+        </div>
+
+        <button>View Profile</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!--chef end-->
+<!--price-->
+<section class="pricing-section">
+  <div class="pricing-container">
+
+    <!-- HEADER -->
+    <div class="pricing-header">
+      <span>OUR PACKAGES</span>
+      <h2>Choose Your Baking Class</h2>
+      <p>Select the perfect class based on your skill level and start your baking journey.</p>
+    </div>
+
+    <!-- CARDS -->
+    <div class="pricing-grid">
+
+      <!-- CARD 1 -->
+      <div class="pricing-card">
+        <h3>Beginner</h3>
+        <h2>₹1999</h2>
+        <ul>
+          <li>Basic Bread Techniques</li>
+          <li>Dough Preparation</li>
+          <li>2 Days Workshop</li>
+          <li>Recipe Guide</li>
+        </ul>
+        <button>Join class</button>
+      </div>
+
+      <!-- CARD 2 (HIGHLIGHT) -->
+      <div class="pricing-card highlight">
+        <h3>Intermediate</h3>
+        <h2>₹3999</h2>
+        <ul>
+          <li>Sourdough & Artisan Bread</li>
+          <li>Fermentation Techniques</li>
+          <li>5 Days Training</li>
+          <li>Hands-on Practice</li>
+        </ul>
+        <button>Join class</button>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="pricing-card">
+        <h3>Advanced</h3>
+        <h2>₹6999</h2>
+        <ul>
+          <li>Professional Baking Skills</li>
+          <li>Pastry & Advanced Recipes</li>
+          <li>10 Days Course</li>
+          <li>Certification</li>
+        </ul>
+        <button>Join class</button>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<!--price end-->
+<!--book-->
+<section class="booking-section">
+  <div class="booking-container">
+
+    <!-- LEFT CONTENT -->
+    <div class="booking-text">
+      <span>JOIN OUR CLASSES</span>
+      <h2>Book Your Bread Making Class</h2>
+      <p>
+        Fill in your details and reserve your seat in our upcoming baking classes.
+        Learn from expert chefs and start your baking journey today.
+      </p>
+    </div>
+
+    <!-- FORM -->
+    <div class="booking-form-box">
+      <form>
+
+        <div class="booking-row">
+          <input type="text" placeholder="Full Name" required>
+          <input type="email" placeholder="Email Address" required>
+        </div>
+
+        <div class="booking-row">
+          <input type="tel" placeholder="Phone Number" required>
+          <select required>
+            <option>Select Class</option>
+            <option>Beginner</option>
+            <option>Intermediate</option>
+            <option>Advanced</option>
+          </select>
+        </div>
+
+        <textarea placeholder="Your Message"></textarea>
+
+        <button type="submit">Book Now</button>
+
+      </form>
+    </div>
+
+  </div>
+</section>
+<!--book end-->
+<footer class="footer">
+
+  <div class="footer-container">
+
+    <!-- LOGO -->
+    <div class="footer-box">
+      <img src="images/logo.png" alt="Sourdough Bakery Logo" class="footer-logo">
+    </div>
+
+    <!-- WORKING HOURS -->
+    <div class="footer-box">
+      <h3>WORKING HOURS</h3>
+      <p>Monday - Friday: 08:00 am – 08:30 pm</p>
+      <p>Saturday: 10:00 am – 06:30 pm</p>
+      <p>Sunday: 10:00 am – 04:30 pm</p>
+    </div>
+
+    <!-- CLASSES / OFFER -->
+    <div class="footer-box">
+      <h3>BAKING CLASSES</h3>
+      <p>Join our sourdough workshops</p>
+      <p>Hands-on learning experience</p>
+      <p>Morning & Evening batches available</p>
+    </div>
+
+    <!-- SUBSCRIBE -->
+    <div class="footer-box">
+      <h3>SUBSCRIBE</h3>
+      <p>Get latest updates and offers.</p>
+
+      <div class="subscribe">
+        <input type="email" placeholder="Your email address *">
+        <button>&#10148;</button>
+      </div>
+    </div>
+
+  </div>
+
+  <hr>
+
+  <!-- BOTTOM -->
+  <div class="footer-bottom">
+    <p>© 2026 Sourdough Bakery & Bread Making Classes</p>
+
+    <div class="socials">
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+    </div>
+  </div>
+
+</footer>
+
+<!-- JS FILE -->
+<script>
+const buttons = document.querySelectorAll(".class-filter button");
+const cards = document.querySelectorAll(".class-card");
+
+buttons.forEach(btn => {
+  btn.addEventListener("click", () => {
+
+    buttons.forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+
+    const filter = btn.dataset.filter;
+
+    cards.forEach(card => {
+      const category = card.dataset.category;
+
+      if (filter === "all" || filter === category) {
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
+    });
+
+  });
+});
+</script>
+<script>
+const tabs = document.querySelectorAll(".schedule-tabs button");
+const days = document.querySelectorAll(".day");
+
+tabs.forEach(tab => {
+  tab.addEventListener("click", () => {
+
+    // remove active from all tabs
+    tabs.forEach(btn => btn.classList.remove("active"));
+    tab.classList.add("active");
+
+    // hide all day content
+    days.forEach(day => day.classList.remove("active"));
+
+    // show selected day
+    const targetDay = tab.getAttribute("data-day");
+    document.getElementById(targetDay).classList.add("active");
+
+  });
+});
+</script>
+<script>
+const btn = document.getElementById("rtlToggleBtn");
+
+btn.addEventListener("click", () => {
+  document.body.classList.toggle("rtl");
+
+  if (document.body.classList.contains("rtl")) {
+    btn.innerText = "LTR";
+  } else {
+    btn.innerText = "RTL";
+  }
+});
+</script>
+<script>
+const darkBtn = document.getElementById("darkToggleBtn");
+
+// Load saved mode, default to dark
+if (localStorage.getItem("theme") === "light") {
+  // Stay light
+} else {
+  document.body.classList.add("dark");
+  darkBtn.innerText = "☀️";
+  localStorage.setItem("theme", "dark");
+}
+
+darkBtn.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+
+  if (document.body.classList.contains("dark")) {
+    localStorage.setItem("theme", "dark");
+    darkBtn.innerText = "☀️";
+  } else {
+    localStorage.setItem("theme", "light");
+    darkBtn.innerText = "🌙";
+  }
+});
+</script>
+<div id="popupForm" class="popup-form">
+
+  <div class="popup-content">
+
+    <!-- CLOSE BUTTON -->
+    <span class="close-btn" onclick="closeForm()">×</span>
+
+    <h2>Join Class</h2>
+
+    <!-- CLASS NAME -->
+    <p id="className"></p>
+
+    <input type="text" placeholder="Your Name">
+    <input type="email" placeholder="Email">
+    <input type="tel" placeholder="Phone">
+
+    <button class="submit-btn">Submit</button>
+
+  </div>
+
+</div>
+<script src="js/script.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const links = document.querySelectorAll(".nav-links a");
+  const currentPath = window.location.pathname.split('/').pop();
+  links.forEach(link => {
+    if (link.getAttribute("href") === currentPath) {
+      link.classList.add("active");
+    }
+  });
+});
+</script>
+</body>
+</html>

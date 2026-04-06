@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sourdough Bakery & Bread Making Classes</title>
+
+  <!-- GOOGLE FONT (ONE FONT ONLY) -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- icon -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- CSS FILE -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  <div class="left">
+    Chennai | +91 98765 43210 | Mon-Sat: 8AM - 8PM
+  </div>
+
+  <div class="right">
+    My Account | Cart
+  </div>
+</div>
+
+<nav class="navbar">
+
+  <!-- LOGO -->
+  <div class="logo">
+    <img src="images/logo.png" alt="Logo">
+  </div>
+
+  <!-- HAMBURGER -->
+  <div class="menu-toggle" id="menu-toggle">☰</div>
+
+  <!-- MENU -->
+  <ul class="nav-links">
+    <li><a href="index.html">Home1</a></li>
+    <li><a href="home2.html">Home2</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="shop.html">Shop</a></li>
+    <li><a href="classes.html">Classes</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+
+    <!-- MOBILE BUTTONS ONLY -->
+  <div class="nav-right">
+    <button id="rtlToggleBtn" class="nav-rtl-btn">RTL</button>
+    <button id="darkToggleBtn" class="dark-btn">🌙</button>
+    <li class="mobile-btn"><a href="#" class="login">Login</a></li>
+    <li class="mobile-btn"><a href="order.html" class="order">Order Now</a></li>
+  </div>
+  
+
+  <!-- DESKTOP BUTTONS -->
+  <div class="nav-btns">
+    <a href="login.html" class="login">Login</a>
+    <a href="order.html" class="order">Order Now</a>
+  </div>
+
+</nav>
+<!--hero-->
+<section class="shop-hero">
+  <div class="shop-hero-content">
+
+    <h1>Our Bakery Shop</h1>
+
+    <div class="breadcrumb">
+      <a href="#">Home</a>
+      <span>›</span>
+      <span>Shop</span>
+    </div>
+
+    <p>
+      Discover our freshly baked breads, cakes, and pastries made daily with love.
+      Order your favorites and enjoy authentic bakery taste.
+    </p>
+
+  </div>
+</section>
+<!--hero end-->
+<!--filter-->
+<section class="shop-filter">
+  <div class="filter-container">
+    
+
+    <!-- CATEGORY BUTTONS -->
+    <div class="filter-buttons">
+      <button class="active" data-filter="all">All</button>
+      <button data-filter="Bread">Bread</button>
+      <button data-filter="Cake">Cakes</button>
+      <button data-filter="Pastry">Pastries</button>
+      <button data-filter="Cookies">Cookies</button>
+    </div>
+
+    <!-- SORT -->
+    <div class="filter-sort">
+      <select>
+        <option value="Default">Sort by Default</option>
+        <option value="low">Price: Low to High</option>
+        <option value="high">Price: High to Low</option>
+        <option value="new">Newest</option>
+      </select>
+    </div>
+
+  </div>
+</section>
+<!--filter end-->
+<!--product-->
+<section class="shopproduct-section">
+  <div class="shopproduct-container">
+
+    <div class="shopproduct-grid">
+
+      <!-- 1 -->
+      <div class="shopproduct-card" data-category="Bread" data-price="120" data-id="1">
+        <div class="wishlist-btn">
+    <i class="fa-regular fa-heart"></i>
+  </div>
+        <img src="images/product1.jpg">
+        <h3>Artisan Bread</h3>
+        <p class="price">₹120</p>
+        <p class="desc">Freshly baked soft bread.</p>
+        <button class="shop-btn">Order Now</button>
+      </div>
+
+      <!-- 2 -->
+      <div class="shopproduct-card" data-category="Cake" data-price="450" data-id="2">
+        <div class="wishlist-btn">
+    <i class="fa-regular fa-heart"></i>
+  </div>
+        <img src="images/product2.jpg">
+        <h3>Chocolate Cake</h3>
+        <p class="price">₹450</p>
+        <p class="desc">Rich chocolate cake.</p>
+        <button class="shop-btn">Order Now</button>
+      </div>
+
+      <!-- 3 -->
+      <div class="shopproduct-card" data-category="Bread"data-price="90" data-id="1" >
+        <div class="wishlist-btn">
+    <i class="fa-regular fa-heart"></i>
+  </div>
+        <img src="images/product3.jpg">
+        <h3>Butter Croissant</h3>
+        <p class="price">₹90</p>
+        <p class="desc">Flaky French pastry.</p>
+        <button class="shop-btn">Order Now</button>
+      </div>
+
+      <!-- 4 -->
+      <div class="shopproduct-card" data-category="Cookies" data-price="150" data-id="3">
+        <div class="wishlist-btn">
+    <i class="fa-regular fa-heart"></i>
+  </div>
+        <img src="images/product4.jpg">
+        <h3>Chocolate Cookies</h3>
+        <p class="price">₹150</p>
+        <p class="desc">Crunchy cookies.</p>
+        <button class="shop-btn">Order Now</button>
+      </div>
+
+      <!-- 5 -->
+      <div class="shopproduct-card" data-category="Bread" data-price="180" data-id="1">
+        <div class="wishlist-btn">
+    <i class="fa-regular fa-heart"></i>
+  </div>
+        <img src="images/product5.jpg">
+        <h3>Sourdough Bread</h3>
+        <p class="price">₹180</p>
+        <p class="desc">Crispy crust bread.</p>
+        <button class="shop-btn">Order Now</button>
+      </div>
+
+      <!-- 6 -->
+      <div class="shopproduct-card" data-category="Cake" data-price="400" data-id="2">
+        <div class="wishlist-btn">
+    <i class="fa-regular fa-heart"></i>
+  </div>
+        <img src="images/product6.jpg">
+        <h3>Strawberry Cake</h3>
+        <p class="price">₹400</p>
+        <p class="desc">Fresh cream cake.</p>
+        <button class="shop-btn">Order Now</button>
+      </div>
+
+      <!-- 7 -->
+      <div class="shopproduct-card" data-category="Pastry" data-price="120" data-id="3">
+        <div class="wishlist-btn">
+    <i class="fa-regular fa-heart"></i>
+  </div>
+        <img src="images/product7.jpg">
+        <h3>Blueberry Pastry</h3>
+        <p class="price">₹120</p>
+        <p class="desc">Soft & fruity pastry.</p>
+        <button class="shop-btn">Order Now</button>
+      </div>
+
+      <!-- 8 -->
+      <div class="shopproduct-card" data-category="Bread" data-price="140" data-id="1">
+        <div class="wishlist-btn">
+    <i class="fa-regular fa-heart"></i>
+  </div>
+        <img src="images/product8.jpg">
+        <h3>Garlic Bread</h3>
+        <p class="price">₹140</p>
+        <p class="desc">Flavorful garlic loaf.</p>
+        <button class="shop-btn">Order Now</button>
+      </div>
+
+      <!-- 9 -->
+      <div class="shopproduct-card" data-category="Cake" data-price="500" data-id="2">
+        <div class="wishlist-btn">
+    <i class="fa-regular fa-heart"></i>
+  </div>
+        <img src="images/product9.jpg">
+        <h3>Red Velvet Cake</h3>
+        <p class="price">₹500</p>
+        <p class="desc">Soft & creamy cake.</p>
+        <button class="shop-btn">Order Now</button>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<!--product end-->
+<!--highlisht-->
+<section class="highlight-section">
+  <div class="highlight-container">
+
+    <!-- IMAGE -->
+    <div class="highlight-image">
+      <img src="images/sourdough.jpg" alt="Sourdough Bread">
+    </div>
+
+    <!-- CONTENT -->
+    <div class="highlight-content">
+
+      <span class="highlight-tag">OUR SPECIAL</span>
+
+      <h2>Signature Sourdough Bread</h2>
+
+      <p>
+        Crafted using traditional fermentation, our sourdough bread offers
+        a rich flavor, soft texture, and perfectly crispy crust.
+      </p>
+
+      <ul class="highlight-list">
+        <li>Freshly baked daily</li>
+        <li>No preservatives</li>
+        <li>Premium ingredients</li>
+      </ul>
+
+      <div class="highlight-price">₹180</div>
+
+
+      <button class="highlight-btn">Order Now</button>
+
+    </div>
+
+  </div>
+</section>
+<!--highlight end-->
+<!--topsell-->
+<section class="top-seller-section">
+  <div class="top-seller-container">
+
+    <!-- HEADER -->
+    <div class="top-seller-header">
+      <span class="top-seller-tag">OUR BEST</span>
+      <h2>Customer Favorites</h2>
+      <p>Most loved bakery products crafted fresh every day.</p>
+    </div>
+
+    <!-- GRID -->
+    <div class="top-seller-grid">
+
+      <!-- CARD -->
+      <div class="top-seller-card">
+        <div class="top-badge">Best Seller</div>
+
+        <div class="top-wishlist">
+          <i class="fa-regular fa-heart"></i>
+        </div>
+
+        <img src="images/best sell.jpg" alt="">
+        <h3>Butter Croissant</h3>
+        <p class="top-price">₹90</p>
+
+        <button class="top-btn">Order Now</button>
+      </div>
+
+      <!-- CARD -->
+      <div class="top-seller-card">
+        <div class="top-badge">Popular</div>
+
+        <div class="top-wishlist">
+          <i class="fa-regular fa-heart"></i>
+        </div>
+
+        <img src="images/popular.jpg" alt="">
+        <h3>Chocolate Brownie</h3>
+        <p class="top-price">₹120</p>
+
+        <button class="top-btn">Order Now</button>
+      </div>
+
+      <!-- CARD -->
+      <div class="top-seller-card">
+        <div class="top-badge">Hot</div>
+
+        <div class="top-wishlist">
+          <i class="fa-regular fa-heart"></i>
+        </div>
+
+        <img src="images/hot.jpg" alt="">
+        <h3>Sourdough Bread</h3>
+        <p class="top-price">₹180</p>
+
+        <button class="top-btn">Order Now</button>
+      </div>
+
+      <!-- CARD -->
+      <div class="top-seller-card">
+        <div class="top-badge">Trending</div>
+
+        <div class="top-wishlist">
+          <i class="fa-regular fa-heart"></i>
+        </div>
+
+        <img src="images/trend.jpg" alt="">
+        <h3>Red Velvet Cake</h3>
+        <p class="top-price">₹450</p>
+
+        <button class="top-btn">Order Now</button>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<!--topsell end-->
+<!--deal-->
+<section class="deal-banner">
+  <div class="deal-overlay">
+    <div class="deal-content">
+
+      <h2>Fresh Bakery Deals Every Day</h2>
+
+      <p>
+        Get 20% off on all fresh breads and pastries. 
+        Limited time offer – order now!
+      </p>
+
+      <button class="deal-btn">Shop Now</button>
+
+    </div>
+  </div>
+</section>
+<!--deal end-->
+<!--review-->
+<section class="review-section">
+  <div class="review-container">
+
+    <!-- HEADER -->
+    <div class="review-header">
+      <span class="review-tag">CUSTOMER FEEDBACK</span>
+      <h2>What Our Customers Say</h2>
+      <p>Real reviews from people who love our bakery products.</p>
+    </div>
+
+    <!-- GRID -->
+    <div class="review-grid">
+
+      <!-- CARD -->
+      <div class="review-card">
+        <img src="images/user1.jpg" alt="">
+        <h3>Priya S</h3>
+
+        <div class="review-stars">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+
+        <p>
+          Fresh and delicious breads! The sourdough is perfectly baked
+          and always tastes amazing.
+        </p>
+      </div>
+
+      <!-- CARD -->
+      <div class="review-card">
+        <img src="images/user2.jpg" alt="">
+        <h3>Rahul K</h3>
+
+        <div class="review-stars">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star-half-stroke"></i>
+        </div>
+
+        <p>
+          The cakes are super soft and beautifully designed. Perfect
+          for celebrations and special occasions.
+        </p>
+      </div>
+
+      <!-- CARD -->
+      <div class="review-card">
+        <img src="images/user3.jpg" alt="">
+        <h3>Anita R</h3>
+
+        <div class="review-stars">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-regular fa-star"></i>
+        </div>
+
+        <p>
+          Loved the croissants and pastries. Fresh, crispy, and full of
+          flavor. Highly recommended!
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<!--review end-->
+<!--subscribe-->
+<section class="subscribe-section">
+  <div class="subscribe-container">
+
+    <div class="subscribe-content">
+
+      <span class="subscribe-tag">STAY UPDATED</span>
+
+      <h2>Get Fresh Bakery Updates</h2>
+
+      <p>
+        Subscribe to receive new product updates, special offers, and fresh bakery deals.
+      </p>
+
+      <!-- FORM -->
+      <form class="subscribe-form">
+        <input type="email" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+
+    </div>
+
+  </div>
+</section>
+<!--subscribe end-->
+<footer class="footer">
+
+  <div class="footer-container">
+
+    <!-- LOGO -->
+    <div class="footer-box">
+      <img src="images/logo.png" alt="Sourdough Bakery Logo" class="footer-logo">
+    </div>
+
+    <!-- WORKING HOURS -->
+    <div class="footer-box">
+      <h3>WORKING HOURS</h3>
+      <p>Monday - Friday: 08:00 am – 08:30 pm</p>
+      <p>Saturday: 10:00 am – 06:30 pm</p>
+      <p>Sunday: 10:00 am – 04:30 pm</p>
+    </div>
+
+    <!-- CLASSES / OFFER -->
+    <div class="footer-box">
+      <h3>BAKING CLASSES</h3>
+      <p>Join our sourdough workshops</p>
+      <p>Hands-on learning experience</p>
+      <p>Morning & Evening batches available</p>
+    </div>
+
+    <!-- SUBSCRIBE -->
+    <div class="footer-box">
+      <h3>SUBSCRIBE</h3>
+      <p>Get latest updates and offers.</p>
+
+      <div class="subscribe">
+        <input type="email" placeholder="Your email address *">
+        <button>&#10148;</button>
+      </div>
+    </div>
+
+  </div>
+
+  <hr>
+
+  <!-- BOTTOM -->
+  <div class="footer-bottom">
+    <p>© 2026 Sourdough Bakery & Bread Making Classes</p>
+
+    <div class="socials">
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+    </div>
+  </div>
+
+</footer>
+<!-- JS FILE -->
+<script src="js/script.js"></script>
+<!-- JS FILE -->
+<script>
+const buttons = document.querySelectorAll(".filter-buttons button");
+const products = document.querySelectorAll(".shopproduct-card");
+
+buttons.forEach(button => {
+  button.addEventListener("click", () => {
+
+    // Remove active from all
+    buttons.forEach(btn => btn.classList.remove("active"));
+    button.classList.add("active");
+
+    const filter = button.getAttribute("data-filter");
+
+    products.forEach(product => {
+      const category = product.getAttribute("data-category");
+
+      if (filter === "all" || filter === category) {
+        product.style.display = "block";
+      } else {
+        product.style.display = "none";
+      }
+    });
+
+  });
+});
+</script>
+<script>
+const wishlistButtons = document.querySelectorAll(".wishlist-btn");
+
+wishlistButtons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    btn.classList.toggle("active");
+  });
+});
+</script>
+<script>
+document.querySelector(".subscribe-form").addEventListener("submit", function(e) {
+  e.preventDefault();
+  alert("Thank you for subscribing!");
+});
+</script>
+<script>
+const btn = document.getElementById("rtlToggleBtn");
+
+btn.addEventListener("click", () => {
+  document.body.classList.toggle("rtl");
+
+  if (document.body.classList.contains("rtl")) {
+    btn.innerText = "LTR";
+  } else {
+    btn.innerText = "RTL";
+  }
+});
+</script>
+<script>
+const darkBtn = document.getElementById("darkToggleBtn");
+
+// Load saved mode, default to dark
+if (localStorage.getItem("theme") === "light") {
+  // Stay light
+} else {
+  document.body.classList.add("dark");
+  darkBtn.innerText = "☀️";
+  localStorage.setItem("theme", "dark");
+}
+
+darkBtn.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+
+  if (document.body.classList.contains("dark")) {
+    localStorage.setItem("theme", "dark");
+    darkBtn.innerText = "☀️";
+  } else {
+    localStorage.setItem("theme", "light");
+    darkBtn.innerText = "🌙";
+  }
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const links = document.querySelectorAll(".nav-links a");
+  const currentPath = window.location.pathname.split('/').pop();
+  links.forEach(link => {
+    if (link.getAttribute("href") === currentPath) {
+      link.classList.add("active");
+    }
+  });
+});
+</script>
+</body>
+</html>

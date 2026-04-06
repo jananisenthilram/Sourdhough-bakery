@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ar"dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sourdough Bakery & Bread Making Classes</title>
+
+  <!-- GOOGLE FONT (ONE FONT ONLY) -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- icon -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- CSS FILE -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  <div class="left">
+    Chennai | +91 98765 43210 | Mon-Sat: 8AM - 8PM
+  </div>
+
+  <div class="right">
+    My Account | Cart
+  </div>
+</div>
+
+<nav class="navbar">
+
+  <!-- LOGO -->
+  <div class="logo">
+    <img src="images/logo.png" alt="Logo">
+  </div>
+
+  <!-- HAMBURGER -->
+  <div class="menu-toggle" id="menu-toggle">☰</div>
+
+  <!-- MENU -->
+  <ul class="nav-links">
+    <li><a href="index.html">Home1</a></li>
+    <li><a href="home2.html">Home2</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="shop.html">Shop</a></li>
+    <li><a href="classes.html">Classes</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+    
+
+    <!-- MOBILE BUTTONS ONLY -->
+    <div class="nav-right">
+      <button id="rtlToggleBtn" class="nav-rtl-btn">RTL</button>
+      <button id="darkToggleBtn" class="dark-btn">🌙</button>
+      <li class="mobile-btn"><a href="#" class="login">Login</a></li>
+      <li class="mobile-btn"><a href="order.html" class="order">Order Now</a></li>
+    </div>
+ 
+
+  <!-- DESKTOP BUTTONS -->
+  <div class="nav-btns">
+    <a href="#" class="login">Login</a>
+    <a href="order.html" class="order">Order Now</a>
+  </div>
+
+</nav>
+<!--hero-->
+<!-- BLOG HERO SECTION -->
+<section class="blog-hero">
+
+  <div class="blog-hero-overlay">
+
+    <div class="blog-hero-content">
+
+      <span class="blog-tag">OUR BLOG</span>
+
+      <h1 class="blog-title">
+        Bakery & Bread Making Stories
+      </h1>
+
+      <p class="blog-desc">
+        Discover baking tips, delicious recipes, and insights from our bread making classes.
+      </p>
+
+      <button class="blog-btn">Explore Blogs</button>
+
+    </div>
+
+  </div>
+
+</section>
+<!--hero end-->
+
+<section class="blog-page">
+
+<div class="blog-wrapper">
+
+  <!-- LEFT SIDE (BLOG POSTS) -->
+  <div class="blog-main">
+
+    <!-- POST 1 -->
+    <div class="blog-row">
+      <div class="blog-img">
+        <img src="images/blog-bread1.jpg">
+      </div>
+      <div class="blog-content">
+        <div class="blog-top">
+          <span><i class="fas fa-eye"></i> 4623</span>
+          <span><i class="far fa-heart"></i> 8</span>
+          <span class="date">April 21, 2024</span>
+        </div>
+        <h2>How to bake the perfect cake?</h2>
+        <p>Learn soft and fluffy cake baking techniques step by step.</p>
+        <a href="#">READ MORE</a>
+      </div>
+    </div>
+
+    <!-- POST 2 -->
+    <div class="blog-row reverse">
+      <div class="blog-img">
+        <img src="images/blog-bread2.jpg">
+      </div>
+      <div class="blog-content">
+        <div class="blog-top">
+          <span><i class="fas fa-eye"></i> 1827</span>
+          <span><i class="far fa-heart"></i> 5</span>
+          <span class="date">March 23, 2024</span>
+        </div>
+        <h2>Perfect Bread Guide</h2>
+        <p>Master delicate macarons with professional techniques.</p>
+        <a href="#">READ MORE</a>
+      </div>
+    </div>
+
+    <!-- POST 3 -->
+    <div class="blog-row">
+      <div class="blog-img">
+        <img src="images/blog-bakery2.jpg">
+      </div>
+      <div class="blog-content">
+        <div class="blog-top">
+          <span><i class="fas fa-eye"></i> 2100</span>
+          <span><i class="far fa-heart"></i> 10</span>
+          <span class="date">April 10, 2024</span>
+        </div>
+        <h2>Sourdough Bread Basics</h2>
+        <p>Learn fermentation and baking techniques for artisan bread.</p>
+        <a href="#">READ MORE</a>
+      </div>
+    </div>
+
+    <!-- POST 4 -->
+    <div class="blog-row reverse">
+      <div class="blog-img">
+        <img src="images/blog-class1.jpg">
+      </div>
+      <div class="blog-content">
+        <div class="blog-top">
+          <span><i class="fas fa-eye"></i> 1700</span>
+          <span><i class="far fa-heart"></i> 7</span>
+          <span class="date">March 17, 2024</span>
+        </div>
+        <h2>Bread Making Classes</h2>
+        <p>Join hands-on workshops and learn from expert bakers.</p>
+        <a href="#">READ MORE</a>
+      </div>
+    </div>
+
+    <!-- PAGINATION -->
+    <div class="pagination">
+      <span class="active">1</span>
+      <span>2</span>
+      <span><i class="fas fa-arrow-right"></i></span>
+    </div>
+
+  </div>
+
+  <!-- RIGHT SIDE (SIDEBAR) -->
+  <div class="blog-sidebar">
+
+    <!-- SEARCH -->
+    <div class="sidebar-box search-box">
+      <input type="text" placeholder="Type and hit enter">
+      <i class="fas fa-search"></i>
+    </div>
+
+    <!-- RECENT POSTS -->
+    <div class="sidebar-box">
+      <h3>RECENT POSTS</h3>
+
+      <div class="recent-post">
+        <img src="images/cake.jpg">
+        <div>
+          <p>How to bake cake</p>
+          <span>April 21</span>
+        </div>
+      </div>
+
+      <div class="recent-post">
+        <img src="images/bread-blog.jpg">
+        <div>
+          <p>Sourdough Tips</p>
+          <span>April 10</span>
+        </div>
+      </div>
+
+      <div class="recent-post">
+        <img src="images/macroon.jpg">
+        <div>
+          <p>Macaron Guide</p>
+          <span>March 23</span>
+        </div>
+      </div>
+
+      <div class="recent-post">
+        <img src="images/baking-class.jpg">
+        <div>
+          <p>Baking Classes</p>
+          <span>March 17</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- CATEGORIES -->
+    <div class="sidebar-box">
+      <h3>CATEGORIES</h3>
+      <ul>
+        <li>Bread (2)</li>
+        <li>Bakery (2)</li>
+        <li>Classes (2)</li>
+        <li>Recipes (2)</li>
+      </ul>
+    </div>
+
+    <!-- FOLLOW -->
+    <div class="sidebar-box">
+      <h3>FOLLOW US</h3>
+      <div class="social">
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-youtube"></i>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+</section>
+<footer class="footer">
+
+  <div class="footer-container">
+
+    <!-- LOGO -->
+    <div class="footer-box">
+      <img src="images/logo.png" alt="Sourdough Bakery Logo" class="footer-logo">
+    </div>
+
+    <!-- WORKING HOURS -->
+    <div class="footer-box">
+      <h3>WORKING HOURS</h3>
+      <p>Monday - Friday: 08:00 am – 08:30 pm</p>
+      <p>Saturday: 10:00 am – 06:30 pm</p>
+      <p>Sunday: 10:00 am – 04:30 pm</p>
+    </div>
+
+    <!-- CLASSES / OFFER -->
+    <div class="footer-box">
+      <h3>BAKING CLASSES</h3>
+      <p>Join our sourdough workshops</p>
+      <p>Hands-on learning experience</p>
+      <p>Morning & Evening batches available</p>
+    </div>
+
+    <!-- SUBSCRIBE -->
+    <div class="footer-box">
+      <h3>SUBSCRIBE</h3>
+      <p>Get latest updates and offers.</p>
+
+      <div class="subscribe">
+        <input type="email" placeholder="Your email address *">
+        <button>&#10148;</button>
+      </div>
+    </div>
+
+  </div>
+
+  <hr>
+
+  <!-- BOTTOM -->
+  <div class="footer-bottom">
+    <p>© 2026 Sourdough Bakery & Bread Making Classes</p>
+
+    <div class="socials">
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+    </div>
+  </div>
+
+</footer>
+
+<!-- JS FILE -->
+<script src="js/script.js"></script>
+<script>
+const btn = document.getElementById("rtlToggleBtn");
+
+btn.addEventListener("click", () => {
+  document.body.classList.toggle("rtl");
+
+  if (document.body.classList.contains("rtl")) {
+    btn.innerText = "LTR";
+  } else {
+    btn.innerText = "RTL";
+  }
+});
+</script>
+<script>
+const darkBtn = document.getElementById("darkToggleBtn");
+
+// Load saved mode, default to dark
+if (localStorage.getItem("theme") === "light") {
+  // Stay light
+} else {
+  document.body.classList.add("dark");
+  darkBtn.innerText = "☀️";
+  localStorage.setItem("theme", "dark");
+}
+
+darkBtn.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+
+  if (document.body.classList.contains("dark")) {
+    localStorage.setItem("theme", "dark");
+    darkBtn.innerText = "☀️";
+  } else {
+    localStorage.setItem("theme", "light");
+    darkBtn.innerText = "🌙";
+  }
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const links = document.querySelectorAll(".nav-links a");
+  const currentPath = window.location.pathname.split('/').pop();
+  links.forEach(link => {
+    if (link.getAttribute("href") === currentPath) {
+      link.classList.add("active");
+    }
+  });
+});
+</script>
+</body>
+</html>
