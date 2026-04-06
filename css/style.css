@@ -876,6 +876,7 @@ body.rtl .rtl-btn {
   height: 120px;
   border-radius: 50%;
   border: 2px solid #fff;
+  background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -5232,7 +5233,7 @@ body.dark .footer-box {
 /* FOOTER LOGO */
 body.dark .footer-logo {
   border: 2px solid #f1f1f1;
-  background: #222;
+  background: white;
 }
 
 body.dark .footer-logo img {
