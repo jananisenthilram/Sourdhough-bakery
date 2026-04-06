@@ -47,6 +47,7 @@
     <li><a href="classes.html">Classes</a></li>
     <li><a href="blog.html">Blog</a></li>
     <li><a href="contact.html">Contact</a></li>
+    <li><a href="order.html" class="active">Order</a></li>
   </ul>
 
   <!-- MOBILE BUTTONS ONLY -->
@@ -54,13 +55,12 @@
     <button id="rtlToggleBtn" class="nav-rtl-btn">RTL</button>
     <button id="darkToggleBtn" class="dark-btn">🌙</button>
     <li class="mobile-btn"><a href="login.html" class="login">Login</a></li>
-    <li class="mobile-btn"><a href="order.html" class="order">Cart</a></li>
+    <li class="mobile-btn"><a href="order.html" class="order">order</a></li>
   </div>
 
   <!-- DESKTOP BUTTONS -->
   <div class="nav-btns">
     <a href="login.html" class="login">Login</a>
-    <a href="order.html" class="order">order now</a>
   </div>
 
 </nav>
@@ -225,6 +225,25 @@
 </footer>
 
 <script src="js/order.js"></script>
+<button id="scrollTopBtn">↑</button>
+<script>
+const scrollBtn = document.getElementById("scrollTopBtn");
+
+window.onscroll = function () {
+  if (document.documentElement.scrollTop > 200) {
+    scrollBtn.style.display = "block";
+  } else {
+    scrollBtn.style.display = "none";
+  }
+};
+
+scrollBtn.onclick = function () {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+};
+</script>
 
 </body>
 </html>

@@ -47,6 +47,7 @@
     <li><a href="classes.html">Classes</a></li>
     <li><a href="blog.html">Blog</a></li>
     <li><a href="contact.html">Contact</a></li>
+    <li><a href="order.html">Order</a></li>
   </ul>
     
 
@@ -62,7 +63,7 @@
   <!-- DESKTOP BUTTONS -->
   <div class="nav-btns">
     <a href="login.html" class="login">Login</a>
-    <a href="order.html" class="order">Order Now</a>
+    
   </div>
 
 </nav>
@@ -74,7 +75,7 @@
     <div class="overlay"></div>
     <div class="content">
       <h1>Freshly Baked Happiness</h1>
-      <p>Artisan sourdough bread & baking classes</p>
+      <p>Artisan sourdough bread & baking classes. Made with love to bring happiness</p>
       <a href="order.html" class="btn">Order Now</a>
     </div>
   </div>
@@ -84,7 +85,7 @@
     <div class="overlay"></div>
     <div class="content">
       <h1>Learn Bread Making</h1>
-      <p>Join our hands-on baking classes</p>
+      <p>Join our hands-on baking classes. Learn the art of bread making from scratch</p>
       <a href="#" class="btn">Join Class</a>
     </div>
   </div>
@@ -94,7 +95,7 @@
     <div class="overlay"></div>
     <div class="content">
       <h1>Authentic Sourdough</h1>
-      <p>Made with love & natural fermentation</p>
+      <p>Authentic sourdhough crafted with time and tradition. Made with love & natural fermentation</p>
       <a href="shop.html" class="btn">Explore Menu</a>
     </div>
   </div>
@@ -500,5 +501,25 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 </script>
+<button id="scrollTopBtn">↑</button>
+<script>
+const scrollBtn = document.getElementById("scrollTopBtn");
+
+window.onscroll = function () {
+  if (document.documentElement.scrollTop > 200) {
+    scrollBtn.style.display = "block";
+  } else {
+    scrollBtn.style.display = "none";
+  }
+};
+
+scrollBtn.onclick = function () {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+};
+</script>
+
 </body>
 </html>

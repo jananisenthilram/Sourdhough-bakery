@@ -47,6 +47,7 @@
     <li><a href="classes.html">Classes</a></li>
     <li><a href="blog.html">Blog</a></li>
     <li><a href="contact.html">Contact</a></li>
+    <li><a href="order.html">Order</a></li>
   </ul>
     
 
@@ -62,7 +63,6 @@
   <!-- DESKTOP BUTTONS -->
   <div class="nav-btns">
     <a href="#" class="login">Login</a>
-    <a href="order.html" class="order">Order Now</a>
   </div>
 
 </nav>
@@ -353,5 +353,25 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 </script>
+<button id="scrollTopBtn">↑</button>
+<script>
+const scrollBtn = document.getElementById("scrollTopBtn");
+
+window.onscroll = function () {
+  if (document.documentElement.scrollTop > 200) {
+    scrollBtn.style.display = "block";
+  } else {
+    scrollBtn.style.display = "none";
+  }
+};
+
+scrollBtn.onclick = function () {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+};
+</script>
+
 </body>
 </html>
