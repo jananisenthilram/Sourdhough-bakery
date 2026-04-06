@@ -233,7 +233,7 @@ body.rtl .rtl-btn {
 .btn {
   background: #fff;
   color: var(--primary);
-  padding: 10px 22px;
+  padding: 5px 22px;
   border-radius: 25px;
   text-decoration: none;
   font-weight: 500;
@@ -333,7 +333,7 @@ body.rtl .rtl-btn {
 }
 
 .feature-box p {
-  font-size: 14px;
+  font-size: 17px;
   color: #555;
 }
 
