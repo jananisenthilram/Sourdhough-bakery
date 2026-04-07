@@ -6046,7 +6046,7 @@ body.dark .form-group textarea {
   bottom: 30px;
   right: 30px;
   display: none;
-  background: #6b4a35;
+  background: #f2a62b;
   color: #fff;
   border: none;
   width: 48px;
@@ -6058,5 +6058,5 @@ body.dark .form-group textarea {
 }
 
 #scrollTopBtn:hover {
-  background: #f59e0b;
+  background: #6b4a35;
 }
