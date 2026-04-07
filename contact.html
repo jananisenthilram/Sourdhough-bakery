@@ -13,6 +13,7 @@
 
   <!-- CSS FILE -->
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animate.css">
 </head>
 
 <body>
@@ -395,14 +396,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const counters = document.querySelectorAll(".counter");
 
-  counters.forEach(counter => {
+  function startCounter(counter) {
+    const target = +counter.getAttribute("data-count");
+    counter.innerText = "0";
+    const increment = target / 80;
 
     const updateCount = () => {
-      const target = +counter.getAttribute("data-count");
       const count = +counter.innerText;
-
-      const increment = target / 60;
-
       if (count < target) {
         counter.innerText = Math.ceil(count + increment);
         setTimeout(updateCount, 20);
@@ -410,8 +410,23 @@ document.addEventListener("DOMContentLoaded", function () {
         counter.innerText = target;
       }
     };
-
     updateCount();
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        startCounter(entry.target);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  counters.forEach(counter => {
+    counter.classList.remove("reveal", "reveal-left", "reveal-right", "reveal-zoom");
+    counter.style.opacity = "1";
+    counter.style.transform = "none";
+    observer.observe(counter);
   });
 
 });
@@ -447,5 +462,6 @@ scrollBtn.onclick = function () {
 };
 </script>
 
+<script src="js/animate.js"></script>
 </body>
 </html>

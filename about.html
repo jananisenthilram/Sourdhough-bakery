@@ -13,6 +13,7 @@
 
   <!-- CSS FILE -->
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animate.css">
 </head>
 
 <body>
@@ -543,54 +544,7 @@
 
 <!-- JS FILE -->
 <script src="js/script.js"></script>
-<script>
-const btn = document.getElementById("rtlToggleBtn");
-
-btn.addEventListener("click", () => {
-  document.body.classList.toggle("rtl");
-
-  if (document.body.classList.contains("rtl")) {
-    btn.innerText = "LTR";
-  } else {
-    btn.innerText = "RTL";
-  }
-});
-</script>
-<script>
-const darkBtn = document.getElementById("darkToggleBtn");
-
-// Load saved mode, default to dark
-if (localStorage.getItem("theme") === "light") {
-  // Stay light
-} else {
-  document.body.classList.add("dark");
-  darkBtn.innerText = "☀️";
-  localStorage.setItem("theme", "dark");
-}
-
-darkBtn.addEventListener("click", () => {
-  document.body.classList.toggle("dark");
-
-  if (document.body.classList.contains("dark")) {
-    localStorage.setItem("theme", "dark");
-    darkBtn.innerText = "☀️";
-  } else {
-    localStorage.setItem("theme", "light");
-    darkBtn.innerText = "🌙";
-  }
-});
-</script>
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  const links = document.querySelectorAll(".nav-links a");
-  const currentPath = window.location.pathname.split('/').pop();
-  links.forEach(link => {
-    if (link.getAttribute("href") === currentPath) {
-      link.classList.add("active");
-    }
-  });
-});
-</script>
+<script src="js/animate.js"></script>
 <button id="scrollTopBtn">↑</button>
 <script>
 const scrollBtn = document.getElementById("scrollTopBtn");
@@ -611,5 +565,6 @@ scrollBtn.onclick = function () {
 };
 </script>
 
+<script src="js/animate.js"></script>
 </body>
 </html>
