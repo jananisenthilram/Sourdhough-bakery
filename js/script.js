@@ -38,12 +38,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
-// menu bar
+// menu bar + direction toggle
 document.addEventListener("DOMContentLoaded", function () {
 
   const toggle = document.getElementById("menu-toggle");
   const navLinks = document.querySelector(".nav-links");
   const mobileActions = document.querySelector(".nav-right");
+  const rtlToggleBtn = document.getElementById("rtlToggleBtn");
 
   function closeMobileMenu() {
     if (navLinks) {
@@ -85,15 +86,24 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-// Function to toggle text direction to RTL for the entire page
-function setRTL() {
-  document.body.classList.toggle('rtl');
-}
+  function applyDirection(isRTL) {
+    document.body.classList.toggle("rtl", isRTL);
+    document.documentElement.setAttribute("dir", isRTL ? "rtl" : "ltr");
 
-  const rtlToggleBtn = document.getElementById("rtlToggleBtn");
+    if (rtlToggleBtn) {
+      rtlToggleBtn.innerText = isRTL ? "LTR" : "RTL";
+    }
+  }
+
+  const savedDirection = localStorage.getItem("direction");
+  const shouldUseRTL = savedDirection === "rtl";
+  applyDirection(shouldUseRTL);
+
   if (rtlToggleBtn) {
     rtlToggleBtn.addEventListener("click", function () {
-      setRTL();
+      const isRTL = !document.body.classList.contains("rtl");
+      applyDirection(isRTL);
+      localStorage.setItem("direction", isRTL ? "rtl" : "ltr");
     });
   }
 

@@ -107,6 +107,40 @@ body.rtl {
   text-align: right;
 }
 
+body.rtl .top-bar {
+  flex-direction: row-reverse;
+}
+
+body.rtl .navbar {
+  direction: rtl;
+}
+
+body.rtl .nav-links {
+  left: auto;
+  right: 50%;
+  transform: translateX(50%);
+}
+
+body.rtl .content {
+  left: auto;
+  right: 10%;
+}
+
+body.rtl .nav-prev {
+  left: auto;
+  right: 20px;
+}
+
+body.rtl .nav-next {
+  right: auto;
+  left: 20px;
+}
+
+body.rtl #scrollTopBtn {
+  right: auto;
+  left: 30px;
+}
+
 /* FLEX FIX (important) */
 .flex-row {
   display: flex;
@@ -354,6 +388,11 @@ body.rtl .rtl-btn {
     border: none;
     border-radius: 8px;
     color: var(--text);
+  }
+
+  body.rtl .menu-toggle {
+    margin-left: 0;
+    margin-right: auto;
   }
 
   .nav-links {
