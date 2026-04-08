@@ -47,21 +47,19 @@
     <li><a href="shop.html">Shop</a></li>
     <li><a href="classes.html">Classes</a></li>
     <li><a href="blog.html">Blog</a></li>
-    <li><a href="contact.html">Contact</a></li>
+    <li><a href="contact.html" class="active">Contact</a></li>
     <li><a href="order.html">Order</a></li>
   </ul>
 
     <!-- MOBILE BUTTONS ONLY -->
   <div class="nav-right">
-      <button id="rtlToggleBtn" class="nav-rtl-btn">RTL</button>
-      <button id="darkToggleBtn" class="dark-btn">🌙</button>
       <li class="mobile-btn"><a href="#" class="login">Login</a></li>
     </div>
- 
-
 
   <!-- DESKTOP BUTTONS -->
   <div class="nav-btns">
+    <button id="rtlToggleBtn" class="nav-rtl-btn">RTL</button>
+    <button id="darkToggleBtn" class="dark-btn">🌙</button>
     <a href="login.html" class="login">Login</a>
   </div>
 
@@ -391,77 +389,64 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 </script>
+<script src="js/animate.js"></script>
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-
+window.addEventListener("load", function () {
   const counters = document.querySelectorAll(".counter");
 
   function startCounter(counter) {
     const target = +counter.getAttribute("data-count");
-    counter.innerText = "0";
-    const increment = target / 80;
-
-    const updateCount = () => {
-      const count = +counter.innerText;
-      if (count < target) {
-        counter.innerText = Math.ceil(count + increment);
-        setTimeout(updateCount, 20);
-      } else {
+    let count = 0;
+    const increment = Math.ceil(target / 80);
+    const timer = setInterval(() => {
+      count += increment;
+      if (count >= target) {
         counter.innerText = target;
+        clearInterval(timer);
+      } else {
+        counter.innerText = count;
       }
-    };
-    updateCount();
+    }, 20);
   }
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        startCounter(entry.target);
-        observer.unobserve(entry.target);
+  setTimeout(() => {
+    counters.forEach(counter => {
+      counter.classList.remove("reveal", "reveal-left", "reveal-right", "reveal-zoom");
+      counter.removeAttribute("style");
+      counter.style.opacity = "1";
+      counter.style.transform = "none";
+      counter.style.transition = "none";
+      const box = counter.closest(".info-box");
+      if (box) {
+        box.classList.remove("reveal", "reveal-left", "reveal-right", "reveal-zoom");
+        box.removeAttribute("style");
+        box.style.opacity = "1";
+        box.style.transform = "none";
       }
     });
-  }, { threshold: 0.3 });
 
-  counters.forEach(counter => {
-    counter.classList.remove("reveal", "reveal-left", "reveal-right", "reveal-zoom");
-    counter.style.opacity = "1";
-    counter.style.transform = "none";
-    observer.observe(counter);
-  });
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          startCounter(entry.target);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
 
-});
-</script>
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  const links = document.querySelectorAll(".nav-links a");
-  const currentPath = window.location.pathname.split('/').pop();
-  links.forEach(link => {
-    if (link.getAttribute("href") === currentPath) {
-      link.classList.add("active");
-    }
-  });
+    counters.forEach(counter => observer.observe(counter));
+  }, 300);
 });
 </script>
 <button id="scrollTopBtn">↑</button>
 <script>
 const scrollBtn = document.getElementById("scrollTopBtn");
-
 window.onscroll = function () {
-  if (document.documentElement.scrollTop > 200) {
-    scrollBtn.style.display = "block";
-  } else {
-    scrollBtn.style.display = "none";
-  }
+  scrollBtn.style.display = document.documentElement.scrollTop > 200 ? "block" : "none";
 };
-
 scrollBtn.onclick = function () {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
-  });
+  window.scrollTo({ top: 0, behavior: "smooth" });
 };
 </script>
-
-<script src="js/animate.js"></script>
 </body>
 </html>
