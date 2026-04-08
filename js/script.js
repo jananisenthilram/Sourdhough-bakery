@@ -7,11 +7,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function showSlide(i) {
     slides.forEach(slide => slide.classList.remove("active"));
-    slides[i].classList.add("active");
+    if (slides[i]) {
+      slides[i].classList.add("active");
+    }
   }
 
   // Next button
-  if (nextBtn) {
+  if (nextBtn && slides.length) {
     nextBtn.addEventListener("click", () => {
       index = (index + 1) % slides.length;
       showSlide(index);
@@ -19,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Prev button
-  if (prevBtn) {
+  if (prevBtn && slides.length) {
     prevBtn.addEventListener("click", () => {
       index = (index - 1 + slides.length) % slides.length;
       showSlide(index);
@@ -27,10 +29,12 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Auto slide
-  setInterval(() => {
-    index = (index + 1) % slides.length;
-    showSlide(index);
-  }, 4000);
+  if (slides.length) {
+    setInterval(() => {
+      index = (index + 1) % slides.length;
+      showSlide(index);
+    }, 4000);
+  }
 
 });
 
@@ -38,13 +42,46 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
 
   const toggle = document.getElementById("menu-toggle");
-  const nav = document.querySelector(".nav-links");
+  const navLinks = document.querySelector(".nav-links");
+  const mobileActions = document.querySelector(".nav-right");
 
-  console.log(toggle); // check in console
+  function closeMobileMenu() {
+    if (navLinks) {
+      navLinks.classList.remove("active");
+    }
 
-  if (toggle && nav) {
+    if (mobileActions) {
+      mobileActions.classList.remove("active");
+    }
+
+    if (toggle) {
+      toggle.setAttribute("aria-expanded", "false");
+    }
+  }
+
+  if (toggle && navLinks) {
     toggle.addEventListener("click", function () {
-      nav.classList.toggle("active");
+      const isOpen = navLinks.classList.toggle("active");
+
+      if (mobileActions) {
+        mobileActions.classList.toggle("active", isOpen);
+      }
+
+      toggle.setAttribute("aria-expanded", String(isOpen));
+    });
+
+    document.querySelectorAll(".nav-links a, .nav-right a").forEach(link => {
+      link.addEventListener("click", function () {
+        if (window.innerWidth <= 900) {
+          closeMobileMenu();
+        }
+      });
+    });
+
+    window.addEventListener("resize", function () {
+      if (window.innerWidth > 900) {
+        closeMobileMenu();
+      }
     });
   }
 
@@ -53,18 +90,12 @@ function setRTL() {
   document.body.classList.toggle('rtl');
 }
 
-// Example usage: call setRTL() when needed, e.g., on a button click or page load
-// document.addEventListener("DOMContentLoaded", setRTL);
-
-// RTL Toggle Button
-document.addEventListener("DOMContentLoaded", function () {
   const rtlToggleBtn = document.getElementById("rtlToggleBtn");
   if (rtlToggleBtn) {
     rtlToggleBtn.addEventListener("click", function () {
       setRTL();
     });
   }
-});
 
 });
 // stat count
@@ -97,7 +128,9 @@ const observer = new IntersectionObserver((entries) => {
   entries.forEach(startCounter);
 }, { threshold: 0.5 });
 
-counters.forEach(counter => observer.observe(counter));
+if (counters.length) {
+  counters.forEach(counter => observer.observe(counter));
+}
 // FILTER FUNCTION
 function filterClass(category, event) {
 
