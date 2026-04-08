@@ -773,19 +773,6 @@ tabs.forEach(tab => {
 });
 </script>
 <script>
-const btn = document.getElementById("rtlToggleBtn");
-
-btn.addEventListener("click", () => {
-  document.body.classList.toggle("rtl");
-
-  if (document.body.classList.contains("rtl")) {
-    btn.innerText = "LTR";
-  } else {
-    btn.innerText = "RTL";
-  }
-});
-</script>
-<script>
 const darkBtn = document.getElementById("darkToggleBtn");
 
 // Load saved mode, default to dark
