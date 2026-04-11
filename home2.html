@@ -10,11 +10,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <!-- icon -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="icon" type="image/png" href="images/logo.png">
    
 
   <!-- CSS FILE -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/responsive.css">
 </head>
 
 <body>
@@ -34,7 +36,9 @@
 
   <!-- LOGO -->
   <div class="logo">
-    <img src="images/logo.png" alt="Logo">
+    <a href="index.html">
+      <img src="images/logo.png" alt="Logo">
+    </a>
   </div>
 
   <!-- HAMBURGER -->
@@ -75,7 +79,7 @@
       <div class="classes-content">
         <h1>Master the Art of Sourdough Baking</h1>
         <p>Learn authentic bread-making techniques from experts.</p>
-        <a href="#" class="btn-primary">Join a Class</a>
+        <a href="classes.html" class="btn-primary">Join a Class</a>
       </div>
     </div>
 
@@ -85,7 +89,7 @@
       <div class="classes-content">
         <h1>Learn Step-by-Step Baking</h1>
         <p>From kneading to baking — we guide you.</p>
-        <a href="#" class="btn-primary">Explore Classes</a>
+        <a href="classes.html" class="btn-primary">Explore Classes</a>
       </div>
     </div>
 
@@ -95,7 +99,7 @@
       <div class="classes-content">
         <h1>Bake Like a Professional</h1>
         <p>Hands-on experience in a real bakery.</p>
-        <a href="#" class="btn-primary">Book Your Spot</a>
+        <a href="order.html" class="btn-primary">Book Your Spot</a>
       </div>
     </div>
 
@@ -141,7 +145,7 @@ master essential techniques, and enjoy the process of creating something truly s
 
       <!-- BUTTON + AUTHOR -->
       <div class="about-bottom">
-        <button class="about-btn">About Us</button>
+        <button class="about-btn" onclick="window.location.href='about.html'">About Us</button>
 
         <div class="author">
           <img src="images/chef.jpg">
@@ -197,7 +201,7 @@ master essential techniques, and enjoy the process of creating something truly s
           <div>✔ Bake Equipment</div>
         </div>
 
-        <button class="btn-primary">See More</button>
+        <button class="btn-primary" onclick="window.location.href='classes.html'">See More</button>
       </div>
 
       <!-- RIGHT -->
@@ -207,7 +211,7 @@ master essential techniques, and enjoy the process of creating something truly s
           <div class="card-content">
             <h3>Pastry Class</h3>
             <p>Master the basics of pastry making and learn to bake light, flaky, and delicious treats with ease.</p>
-            <a href="#">Learn More →</a>
+            <a href="classes.html">Learn More →</a>
           </div>
         </div>
       </div>
@@ -222,7 +226,7 @@ master essential techniques, and enjoy the process of creating something truly s
         <div class="card-content">
           <h3>Bread Class</h3>
           <p>Master the basics of sourdough and bake your own fresh artisan bread.</p>
-          <a href="#">Learn More →</a>
+          <a href="classes.html">Learn More →</a>
         </div>
       </div>
 
@@ -231,7 +235,7 @@ master essential techniques, and enjoy the process of creating something truly s
         <div class="card-content">
           <h3>Cake Class</h3>
           <p>Learn cake baking, layering, and decoration with expert techniques.</p>
-          <a href="#">Learn More →</a>
+          <a href="classes.html">Learn More →</a>
         </div>
       </div>
 
@@ -240,7 +244,7 @@ master essential techniques, and enjoy the process of creating something truly s
         <div class="card-content">
           <h3>Kids Class</h3>
           <p>Fun baking sessions for kids to learn, create, and enjoy.</p>
-          <a href="#">Learn More →</a>
+          <a href="classes.html">Learn More →</a>
         </div>
       </div>
 
@@ -387,7 +391,7 @@ master essential techniques, and enjoy the process of creating something truly s
         <a href="#" class="learn-link">View Details →</a>
       </div>
 
-      <button class="join-btn disabled">Full Booked</button>
+      <button class="join-btn disabled">Fully Booked</button>
     </div>
 
     <!-- EVENT 3 -->
@@ -501,7 +505,9 @@ master essential techniques, and enjoy the process of creating something truly s
 
     <!-- LOGO -->
     <div class="footer-box">
-      <img src="images/logo.png" alt="Sourdough Bakery Logo" class="footer-logo">
+      <a href="index.html">
+        <img src="images/logo.png" alt="Sourdough Bakery Logo" class="footer-logo">
+      </a>
     </div>
 
     <!-- WORKING HOURS -->
@@ -553,25 +559,51 @@ master essential techniques, and enjoy the process of creating something truly s
 <script>
 let slides = document.querySelectorAll(".classes-slide");
 let index = 0;
+const classesSlider = document.querySelector(".classes-slider");
+let touchStartX = 0;
+let touchEndX = 0;
 
 function showSlide(i) {
   slides.forEach(s => s.classList.remove("active"));
   slides[i].classList.add("active");
 }
 
-document.querySelector(".nav-next").onclick = () => {
+function goToNextSlide() {
   index = (index + 1) % slides.length;
   showSlide(index);
-};
+}
 
-document.querySelector(".nav-prev").onclick = () => {
+function goToPrevSlide() {
   index = (index - 1 + slides.length) % slides.length;
   showSlide(index);
-};
+}
+
+document.querySelector(".nav-next").onclick = goToNextSlide;
+document.querySelector(".nav-prev").onclick = goToPrevSlide;
+
+if (classesSlider) {
+  classesSlider.addEventListener("touchstart", (event) => {
+    touchStartX = event.changedTouches[0].clientX;
+  }, { passive: true });
+
+  classesSlider.addEventListener("touchend", (event) => {
+    touchEndX = event.changedTouches[0].clientX;
+    const swipeDistance = touchEndX - touchStartX;
+
+    if (Math.abs(swipeDistance) < 40) {
+      return;
+    }
+
+    if (swipeDistance < 0) {
+      goToNextSlide();
+    } else {
+      goToPrevSlide();
+    }
+  }, { passive: true });
+}
 
 setInterval(() => {
-  index = (index + 1) % slides.length;
-  showSlide(index);
+  goToNextSlide();
 }, 4000);
 </script>
 <script>
