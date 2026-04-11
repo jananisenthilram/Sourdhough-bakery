@@ -12,27 +12,57 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
+  function goToNextSlide() {
+    index = (index + 1) % slides.length;
+    showSlide(index);
+  }
+
+  function goToPrevSlide() {
+    index = (index - 1 + slides.length) % slides.length;
+    showSlide(index);
+  }
+
   // Next button
   if (nextBtn && slides.length) {
-    nextBtn.addEventListener("click", () => {
-      index = (index + 1) % slides.length;
-      showSlide(index);
-    });
+    nextBtn.addEventListener("click", goToNextSlide);
   }
 
   // Prev button
   if (prevBtn && slides.length) {
-    prevBtn.addEventListener("click", () => {
-      index = (index - 1 + slides.length) % slides.length;
-      showSlide(index);
-    });
+    prevBtn.addEventListener("click", goToPrevSlide);
+  }
+
+  if (slides.length) {
+    const slider = document.querySelector(".hero-slider");
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    if (slider) {
+      slider.addEventListener("touchstart", (event) => {
+        touchStartX = event.changedTouches[0].clientX;
+      }, { passive: true });
+
+      slider.addEventListener("touchend", (event) => {
+        touchEndX = event.changedTouches[0].clientX;
+        const swipeDistance = touchEndX - touchStartX;
+
+        if (Math.abs(swipeDistance) < 40) {
+          return;
+        }
+
+        if (swipeDistance < 0) {
+          goToNextSlide();
+        } else {
+          goToPrevSlide();
+        }
+      }, { passive: true });
+    }
   }
 
   // Auto slide
   if (slides.length) {
     setInterval(() => {
-      index = (index + 1) % slides.length;
-      showSlide(index);
+      goToNextSlide();
     }, 4000);
   }
 
@@ -44,6 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const toggle = document.getElementById("menu-toggle");
   const navLinks = document.querySelector(".nav-links");
   const mobileActions = document.querySelector(".nav-right");
+  const navControls = document.querySelector(".nav-btns");
   const rtlToggleBtn = document.getElementById("rtlToggleBtn");
 
   function closeMobileMenu() {
@@ -53,6 +84,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (mobileActions) {
       mobileActions.classList.remove("active");
+    }
+
+    if (navControls) {
+      navControls.classList.remove("active");
     }
 
     if (toggle) {
@@ -68,10 +103,14 @@ document.addEventListener("DOMContentLoaded", function () {
         mobileActions.classList.toggle("active", isOpen);
       }
 
+      if (navControls) {
+        navControls.classList.toggle("active", isOpen);
+      }
+
       toggle.setAttribute("aria-expanded", String(isOpen));
     });
 
-    document.querySelectorAll(".nav-links a, .nav-right a").forEach(link => {
+    document.querySelectorAll(".nav-links a, .nav-right a, .nav-btns a, .nav-btns button").forEach(link => {
       link.addEventListener("click", function () {
         if (window.innerWidth <= 900) {
           closeMobileMenu();

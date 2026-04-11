@@ -4,11 +4,15 @@
 @media (max-width: 900px) {
 
   .nav-links {
-    position: absolute;
-    top: 100%;
-    left: auto;
-    right: 10px;
+    position: static;
+    order: 3;
+    width: 100%;
     transform: none;
+  }
+
+  .nav-right {
+    order: 4;
+    width: 100%;
   }
 
   .nav-btns { display: none; }
@@ -71,8 +75,59 @@
   .logo img { height: 50px; }
 
   .hero-slider { height: 60vh; }
+  .classes-hero { height: 60vh; }
+  .content {
+    left: 50%;
+    right: auto;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 30px);
+    max-width: 100%;
+    padding: 0 10px;
+    text-align: center;
+  }
+  body.rtl .content {
+    left: 50%;
+    right: auto;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .classes-content {
+    width: calc(100% - 30px);
+    max-width: 100%;
+    padding: 0 10px;
+  }
   .content h1 { font-size: 26px; }
   .content p { font-size: 14px; }
+  .classes-content h1 { font-size: 26px; }
+  .classes-content p { font-size: 14px; }
+  .prev,
+  .next,
+  .nav-prev,
+  .nav-next {
+    bottom: 14px;
+    padding: 8px 10px;
+    font-size: 18px;
+  }
+  .prev { left: 12px; }
+  .next { right: 12px; }
+  .nav-prev { left: 12px; }
+  .nav-next { right: 12px; }
+  body.rtl .prev {
+    left: auto;
+    right: 12px;
+  }
+  body.rtl .next {
+    right: auto;
+    left: 12px;
+  }
+  body.rtl .nav-prev {
+    left: auto;
+    right: 12px;
+  }
+  body.rtl .nav-next {
+    right: auto;
+    left: 12px;
+  }
 
   .features { flex-direction: column; align-items: center; gap: 30px; }
   .feature-box { width: 100%; max-width: 100%; }
@@ -139,6 +194,8 @@
   .login-container { flex-direction: column; width: 95%; height: auto; }
   .login-image { width: 100%; height: 180px; }
   .login-form { width: 100%; padding: 25px 15px; }
+  .reg-wrapper { min-height: 100vh; padding: 20px 15px; }
+  .reg-card { width: 100%; max-width: 360px; padding: 24px 18px; }
 
   .promo-container { flex-direction: column; text-align: center; }
 
