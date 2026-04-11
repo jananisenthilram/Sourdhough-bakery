@@ -120,23 +120,105 @@ document.getElementById('orderForm').addEventListener('submit', function(e) {
   updateCart();
 });
 
-// MOBILE MENU TOGGLE
-document.getElementById('menu-toggle').addEventListener('click', function() {
-  const navLinks = document.querySelector('.nav-links');
-  navLinks.classList.toggle('active');
-});
-
-// DARK MODE TOGGLE
-document.getElementById('darkToggleBtn').addEventListener('click', function() {
-  document.body.classList.toggle('dark');
-  localStorage.setItem('darkMode', document.body.classList.contains('dark'));
-});
-
-// LOAD DARK MODE PREFERENCE
 window.addEventListener('DOMContentLoaded', function() {
-  if (localStorage.getItem('darkMode') === 'true') {
-    document.body.classList.add('dark');
+  const toggle = document.getElementById('menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  const mobileActions = document.querySelector('.nav-right');
+  const navControls = document.querySelector('.nav-btns');
+  const rtlToggleBtn = document.getElementById('rtlToggleBtn');
+  const darkBtn = document.getElementById('darkToggleBtn');
+
+  function closeMobileMenu() {
+    if (navLinks) {
+      navLinks.classList.remove('active');
+    }
+
+    if (mobileActions) {
+      mobileActions.classList.remove('active');
+    }
+
+    if (navControls) {
+      navControls.classList.remove('active');
+    }
+
+    if (toggle) {
+      toggle.setAttribute('aria-expanded', 'false');
+    }
   }
+
+  if (toggle && navLinks) {
+    toggle.addEventListener('click', function() {
+      const isOpen = navLinks.classList.toggle('active');
+
+      if (mobileActions) {
+        mobileActions.classList.toggle('active', isOpen);
+      }
+
+      if (navControls) {
+        navControls.classList.toggle('active', isOpen);
+      }
+
+      toggle.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    document.querySelectorAll('.nav-links a, .nav-right a, .nav-btns a, .nav-btns button').forEach(link => {
+      link.addEventListener('click', function() {
+        if (window.innerWidth <= 900) {
+          closeMobileMenu();
+        }
+      });
+    });
+
+    window.addEventListener('resize', function() {
+      if (window.innerWidth > 900) {
+        closeMobileMenu();
+      }
+    });
+  }
+
+  function applyDirection(isRTL) {
+    document.body.classList.toggle('rtl', isRTL);
+    document.documentElement.setAttribute('dir', isRTL ? 'rtl' : 'ltr');
+
+    if (rtlToggleBtn) {
+      rtlToggleBtn.innerText = isRTL ? 'LTR' : 'RTL';
+    }
+  }
+
+  const savedDirection = localStorage.getItem('direction');
+  applyDirection(savedDirection === 'rtl');
+
+  if (rtlToggleBtn) {
+    rtlToggleBtn.addEventListener('click', function() {
+      const isRTL = !document.body.classList.contains('rtl');
+      applyDirection(isRTL);
+      localStorage.setItem('direction', isRTL ? 'rtl' : 'ltr');
+    });
+  }
+
+  if (localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('dark');
+    if (darkBtn) {
+      darkBtn.innerText = '☀️';
+    }
+  } else if (darkBtn) {
+    darkBtn.innerText = '🌙';
+  }
+
+  if (darkBtn) {
+    darkBtn.addEventListener('click', function() {
+      document.body.classList.toggle('dark');
+
+      if (document.body.classList.contains('dark')) {
+        localStorage.setItem('theme', 'dark');
+        darkBtn.innerText = '☀️';
+      } else {
+        localStorage.setItem('theme', 'light');
+        darkBtn.innerText = '🌙';
+      }
+    });
+  }
+
   document.getElementById('checkoutBtn').disabled = false;
   renderProducts();
   updateTotals();
