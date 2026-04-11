@@ -356,7 +356,7 @@ body.rtl .rtl-btn {
 }
 
 .home1-main-heading {
-  color: #000;
+  color: #fff;
 }
 
 .home1-page .content {
@@ -367,13 +367,17 @@ body.rtl .rtl-btn {
   width: calc(100% - 40px);
 }
 
+.home1-page .hero-slider .content h1 {
+  color: #fff;
+}
+
 .home1-page h1,
 .home1-page h2,
 .home1-page h3,
 .home1-page h4,
 .home1-page h5,
 .home1-page h6 {
-  color: #000;
+  color: var(--primary);
   text-align: center;
 }
 
@@ -563,13 +567,19 @@ body.rtl .rtl-btn {
 .features {
   display: flex;
   justify-content: space-around;
+  gap: 30px;
   text-align: center;
-  padding: 60px 20px;
+  padding: 80px 20px 60px;
   background: #f9f4ee;
 }
 
 .feature-box {
   max-width: 300px;
+  padding: 10px 5px;
+  background: #fff;
+  border: 1px solid #e7d7c6;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
 }
 
 .feature-box i {
@@ -686,6 +696,12 @@ body.rtl .rtl-btn {
 /* TEXT */
 .productoverlay h3 {
   margin-bottom: 10px;
+  color: #fff;
+}
+
+.productoverlay p,
+.productoverlay span {
+  color: #fff;
 }
 
 .productoverlay span {
@@ -6364,9 +6380,9 @@ body.dark .form-group textarea {
 .checkout-btn {
   width: 100%;
   background: #f59e0b;
-  color: white;
+  color: #fff;
   padding: 15px;
-  border: none;
+  border: 2px solid #f59e0b;
   border-radius: 5px;
   font-size: 16px;
   font-weight: 700;
@@ -6377,6 +6393,8 @@ body.dark .form-group textarea {
 
 .checkout-btn:hover {
   background: #6b4a35;
+  color: #fff;
+  border-color: #6b4a35;
 }
 
 .checkout-btn:disabled {

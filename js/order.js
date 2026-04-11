@@ -87,8 +87,6 @@ function updateTotals() {
   document.getElementById('delivery').textContent = `$${delivery.toFixed(2)}`;
   document.getElementById('total').textContent = `$${total.toFixed(2)}`;
 
-  // Enable/disable checkout button
-  document.getElementById('checkoutBtn').disabled = cart.length === 0;
 }
 
 // HANDLE FORM SUBMISSION
@@ -139,6 +137,7 @@ window.addEventListener('DOMContentLoaded', function() {
   if (localStorage.getItem('darkMode') === 'true') {
     document.body.classList.add('dark');
   }
+  document.getElementById('checkoutBtn').disabled = false;
   renderProducts();
   updateTotals();
 });
