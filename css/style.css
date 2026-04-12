@@ -1181,6 +1181,11 @@ body.rtl .rtl-btn {
   font-weight: 600;
 }
 
+.home1-page .footer-box h3 {
+  color: #fff;
+  text-align: left;
+}
+
 /* TEXT */
 .footer-box p {
   font-size: 14px;
@@ -2028,6 +2033,11 @@ body.rtl .rtl-btn {
   font-weight: 600;
 }
 
+.home1-page .grid-item.text h4 {
+  color: #fff;
+  text-align: left;
+}
+
 /* QUOTE ICON (optional effect) */
 .grid-item.text::after {
   content: "”";
@@ -2049,6 +2059,24 @@ body.rtl .rtl-btn {
   .grid-container {
     grid-template-columns: 1fr;
   }
+}
+
+.home1-testimonials {
+  padding: 100px 20px 0;
+  background: #fffaf4;
+}
+
+.home1-testimonials .gallery-header,
+.instagram-gallery .gallery-header {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.home1-testimonials .gallery-header p,
+.instagram-gallery .gallery-header p {
+  max-width: 620px;
+  margin: 0 auto;
 }
 /*cta promo*/
 /* SECTION BACKGROUND */
@@ -2728,6 +2756,24 @@ body.rtl .rtl-btn {
 .gallery-card h3 {
   font-size: 18px;
   margin-top: 5px;
+}
+
+.gallery-follow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  padding: 12px 24px;
+  border-radius: 999px;
+  background: #6b4a35;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.gallery-follow:hover {
+  background: var(--primary);
+  transform: translateY(-2px);
 }
 
 /* RESPONSIVE */
@@ -5495,6 +5541,7 @@ body.dark .products,
 body.dark .why,
 body.dark .blog,
 body.dark .home-services,
+body.dark .home1-testimonials,
 body.dark .faq-section,
 body.dark .contact-section,
 body.dark .shopproduct-section,
@@ -5927,6 +5974,16 @@ body.dark .booking-form-box,
 body.dark .sidebar-box,
 body.dark .login-box {
   border-color: rgba(255, 255, 255, 0.15);
+}
+
+body.dark .home1-testimonials .gallery-header p,
+body.dark .instagram-gallery .gallery-header p {
+  color: #d1d5db;
+}
+
+body.dark .gallery-follow {
+  background: var(--primary);
+  color: #121212;
 }
 
 body.dark .reg-title,
