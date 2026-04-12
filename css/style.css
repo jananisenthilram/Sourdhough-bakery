@@ -440,7 +440,7 @@ body.rtl .rtl-btn {
   display: none;
 }
 /* MOBILE VIEW */
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
 
   .navbar {
     flex-wrap: wrap;
@@ -5618,6 +5618,21 @@ body.dark p {
   color: #ccc;
 }
 
+body.dark .section-sub,
+body.dark .blog-meta,
+body.dark .hero-sub,
+body.dark .achievement-desc,
+body.dark .pricing-header p,
+body.dark .gallery-header p,
+body.dark .login-options label,
+body.dark .reg-social-text {
+  color: #d1d5db;
+}
+
+body.dark .line {
+  background: #4b5563;
+}
+
 /* INPUTS */
 body.dark input,
 body.dark textarea,
@@ -5627,14 +5642,26 @@ body.dark select {
   border: 1px solid #444;
 }
 
+body.dark input::placeholder,
+body.dark textarea::placeholder,
+body.dark select::placeholder {
+  color: #a3a3a3;
+}
+
+body.dark .password-box i {
+  color: #d1d5db;
+}
+
 /* BUTTONS */
 body.dark button,
+body.dark .btn,
 body.dark .order,
 body.dark .order-btn,
 body.dark .shop-btn,
 body.dark .class-btn,
 body.dark .btn-primary,
-body.dark .cta-btn {
+body.dark .cta-btn,
+body.dark .promo-btn a {
   background: var(--primary);
   color: #fff;
 }
@@ -5839,6 +5866,21 @@ body.dark .nav-links {
 body.dark .menu-toggle {
   background: #2a2a2a;
   color: #f1f1f1;
+}
+
+body.dark .prev,
+body.dark .next,
+body.dark .nav-prev,
+body.dark .nav-next {
+  background: rgba(0, 0, 0, 0.45);
+  color: #fff;
+}
+
+body.dark .prev:hover,
+body.dark .next:hover,
+body.dark .nav-prev:hover,
+body.dark .nav-next:hover {
+  background: var(--primary);
 }
 
 body.dark .nav-links a {

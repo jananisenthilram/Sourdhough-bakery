@@ -112,14 +112,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.querySelectorAll(".nav-links a, .nav-right a, .nav-btns a, .nav-btns button").forEach(link => {
       link.addEventListener("click", function () {
-        if (window.innerWidth <= 900) {
+        if (window.innerWidth <= 1024) {
           closeMobileMenu();
         }
       });
     });
 
     window.addEventListener("resize", function () {
-      if (window.innerWidth > 900) {
+      if (window.innerWidth > 1024) {
         closeMobileMenu();
       }
     });
@@ -148,38 +148,96 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 // stat count
-const counters = document.querySelectorAll(".counter");
+let counterObserver;
 
-const startCounter = (entry) => {
-  if (entry.isIntersecting) {
-    counters.forEach(counter => {
-      let target = +counter.getAttribute("data-target");
-      let count = 0;
-
-      let updateCount = () => {
-        let speed = target / 100;
-        count += speed;
-
-        if (count < target) {
-          counter.innerText = Math.floor(count);
-          requestAnimationFrame(updateCount);
-        } else {
-          counter.innerText = target + "+";
-        }
-      };
-
-      updateCount();
-    });
-  }
-};
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(startCounter);
-}, { threshold: 0.5 });
-
-if (counters.length) {
-  counters.forEach(counter => observer.observe(counter));
+function getCounterTarget(counter) {
+  return Number(counter.getAttribute("data-target") || counter.getAttribute("data-count") || 0);
 }
+
+function getCounterSuffix(counter) {
+  if (counter.hasAttribute("data-suffix")) {
+    return counter.getAttribute("data-suffix");
+  }
+
+  return counter.hasAttribute("data-target") ? "+" : "";
+}
+
+function runCounter(counter) {
+  if (counter.dataset.counterAnimated === "true") {
+    return;
+  }
+
+  const target = getCounterTarget(counter);
+  const suffix = getCounterSuffix(counter);
+
+  if (!Number.isFinite(target) || target <= 0) {
+    counter.innerText = `0${suffix}`;
+    counter.dataset.counterAnimated = "true";
+    return;
+  }
+
+  counter.dataset.counterAnimated = "true";
+
+  let current = 0;
+  const increment = Math.max(target / 100, 1);
+
+  function updateCount() {
+    current += increment;
+
+    if (current < target) {
+      counter.innerText = `${Math.floor(current)}${suffix}`;
+      requestAnimationFrame(updateCount);
+    } else {
+      counter.innerText = `${target}${suffix}`;
+    }
+  }
+
+  updateCount();
+}
+
+function initCounters(resetCounters = false) {
+  const counters = document.querySelectorAll(".counter");
+
+  if (!counters.length || typeof IntersectionObserver === "undefined") {
+    return;
+  }
+
+  if (counterObserver) {
+    counterObserver.disconnect();
+  }
+
+  counters.forEach(counter => {
+    if (resetCounters || counter.dataset.counterAnimated !== "true") {
+      counter.dataset.counterAnimated = "false";
+      counter.innerText = "0";
+    }
+  });
+
+  counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        runCounter(entry.target);
+        counterObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  counters.forEach(counter => {
+    if (counter.dataset.counterAnimated !== "true") {
+      counterObserver.observe(counter);
+    }
+  });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  initCounters(true);
+});
+
+window.addEventListener("pageshow", function (event) {
+  if (event.persisted) {
+    initCounters(true);
+  }
+});
 // FILTER FUNCTION
 function filterClass(category, event) {
 

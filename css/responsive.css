@@ -100,6 +100,15 @@
   .content p { font-size: 14px; }
   .classes-content h1 { font-size: 26px; }
   .classes-content p { font-size: 14px; }
+
+  .hero-slider .btn,
+  .promo-btn a {
+    padding: 10px 20px;
+    font-size: 14px;
+    line-height: 1.2;
+    border-radius: 22px;
+  }
+
   .prev,
   .next,
   .nav-prev,
@@ -181,6 +190,27 @@
   .blog-row, .blog-row.reverse { flex-direction: column; }
   .blog-img, .blog-content { width: 100%; }
   .blog-img img { height: 200px; }
+
+  .highlight-list,
+  .course-highlight-list {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    text-align: left;
+  }
+
+  .highlight-list li,
+  .course-highlight-list li {
+    list-style-position: outside;
+  }
+
+  body.rtl .highlight-list,
+  body.rtl .course-highlight-list {
+    padding-left: 0;
+    padding-right: 20px;
+    text-align: right;
+  }
 
   .order-container { grid-template-columns: 1fr; }
   .order-products { grid-template-columns: 1fr; }
